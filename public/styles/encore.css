@@ -199,22 +199,24 @@ div{
 .examples-menu-item-body p{padding:20px;}
 
 #examples-content{
-	width:45%;
+	width:50%;
 	height:650px;
 	margin-left:5%;
-	margin-right:10%;
+	margin-right:5%;
 	height:700px;
 	display:inline-block;
 	overflow:hidden;
+	background:url('/images/ipad.png') no-repeat center;
+	background-size:100% 100%;
 }
 #examples-content-trail{
-	width:100%;
+	width:94%;
+	margin:62px 0 0 3%;
 	position:relative;
-	top:0;
 }
 #examples-content-trail div{
 	width:100%;
-	height:650px;
+	height:575px;
 	z-index:0;
 	position:absolute;
 	top:0;
