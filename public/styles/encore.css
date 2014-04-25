@@ -3,11 +3,11 @@
 
 *{
 	outline:none;
+	font-family:proxima_nova_ltlight;
 }
 
 body{
 	margin:0;
-	font-family:proxima_nova_ltlight;
 	color:#474E5B;
 }
 
@@ -17,6 +17,18 @@ ul,li, button{
 	margin:0;
 	padding:0;
 	list-style-type:none;
+}
+button{
+	border:none;
+	background-color:#E56857;
+	color:#fff;
+	cursor:pointer;
+}
+input{
+	border:1px solid #474E5B;
+	font-size:18px;
+	text-align:center;
+	box-sizing:border-box;
 }
 ul{counter-reset:item;}
 li{
@@ -61,12 +73,12 @@ h2{
 	line-height:26px;
 }
 h3{
-	font-size:18px;
-	line-height:20px;
+	color:#fff;
+	font-size:20px;
+	line-height:22px;
 }
-.title{
-	margin-bottom:60px;
-}
+.title{margin-bottom:60px;}
+.subtitle{margin-bottom:20px;}
 
 section{
 	text-align:center;
@@ -117,6 +129,36 @@ div{
 	width:45%;
 	background-image:url('/images/georgetown.png');
 }
+
+/**
+* expertise
+*/
+#expertise{
+	background-color:#474E5B;
+	padding:100px 0;
+}
+.expertise-box{
+	height:360px;
+	display:inline-block;
+	width:32%;
+	background-color:red;
+	margin-right:2%;
+	vertical-align:top;
+	padding-top:180px;
+}
+.expertise-box:last-child{margin-right:0;}
+.expertise-box-content{
+	background-color:#fff;
+	text-align:left;
+	height:180px;
+	color:#474E5B;
+	padding:4%;
+	border-left:3px solid green;
+}
+.expertise-box-content:first-child{}
+.expertise-box-content:nth-child(2){}
+.expertise-box-content:nth-child(3){}
+.expertise-box-content p{margin-bottom:2px;}
 /**
 * how encore works
 */
@@ -332,4 +374,68 @@ div{
 #people-saying-media-tc{
 	width:20%;
 	background-image:url('/images/tech-cocktail.png');
+}
+
+/*
+* 
+*/
+#blog{
+	background-color:#F9F9F9;
+	padding:100px 0;
+}
+#blog-presentation{
+	display:inline-block;
+	width:25%;
+	text-align:left;
+}
+#blog-presentation h1{
+	color:#474E5B;
+}
+#blog-presentation input{
+	height:60px;
+	margin-top:20px;
+	width:100%;
+}
+#blog-presentation button{
+	height:60px;
+	font-size:22px;
+	width:100%;
+	margin-top:6px;
+}
+#blog-content{
+	display:inline-block;
+	width:74%;
+	margin-left:1%;
+}
+.blog-content-box{
+	width:49%;
+	margin-left:1%;
+	margin-bottom:1%;
+	height:200px;
+	background-color:red;
+	display:inline-block;
+}
+
+/**
+* why encore
+*/
+#why-encore{
+	background-color:#E56857;
+	padding:100px 0;
+}
+#why-encore-logo{
+	height:100px;
+	background:url('/images/encore-bell.png') no-repeat center;
+	background-size:auto 100%;
+	margin-bottom:40px;
+}
+#why-encore p{
+	color:#fff;
+	margin-bottom:40px;
+}
+#why-encore p:after,
+#why-encore p:before{
+	content:'•';
+	margin:0 6px;
+	font-size:20px;
 }
