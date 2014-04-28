@@ -11,6 +11,7 @@ a{
 body{
   margin:0;
   color:#474E5B;
+  min-width:1024px;
 }
 
 h1, h2, h3, h4, h5, h6, p,
@@ -63,6 +64,10 @@ p{
   font-size:18px;
   line-height:22px;
 }
+small{
+  font-size:14px;
+  line-height16px;
+}
 b{font-family:proxima_nova_rgbold;}
 h1{
   font-size:32px;
@@ -108,6 +113,11 @@ header{
   width: 100%;
   height:100px;
 }
+header.fixed{
+  position: fixed;
+  background-color: #fff;
+  height:60px;
+}
 header #logo{
   display:inline-block;
   width:50%;
@@ -115,12 +125,17 @@ header #logo{
   background:url('/images/logo.png') no-repeat left center;
   background-size: auto 20%;
 }
+header.fixed #logo{height:60px;}
 #top-links{
   display:inline-block;
   text-align:right;
   width:50%;
   height: 100px;
   padding-top:32px;
+}
+.fixed #top-links{
+  height:60px;
+  padding-top:12px;
 }
 #top-links a{
   line-height:36px;
@@ -202,6 +217,12 @@ header #logo{
   display:inline-block;
   width:30%;
   height:100px;
+  text-align: left;
+  padding-top:20px;
+}
+#tweets-filtered h1{
+  color:#E56857;
+  font-size:40px;
 }
 #clients{
   width:70%;
@@ -402,7 +423,7 @@ header #logo{
   padding:2% 2% 2% 3%;
   vertical-align:top;
   height:180px;
-  margin-bottom:30px;
+  margin-bottom:45px;
 }
 .people-saying-box:after{
   content:'';
@@ -425,6 +446,7 @@ header #logo{
   border-width:15px;
 }
 .people-saying-box:first-child{margin-right:4%;}
+.people-saying-box:nth-child(3){margin-right:4%;}
 .people-saying-box > p:after,
 .people-saying-box > p:before{content:'"';}
 .people-saying-box-author{
@@ -440,6 +462,8 @@ header #logo{
 }
 .people-saying-box-author[data-author="anupam"]{background-image:url('/images/anupam.png');}
 .people-saying-box-author[data-author="sonny"]{background-image:url('/images/sonny.png');}
+.people-saying-box-author[data-author="tine"]{background-image:url('/images/tina.png');}
+.people-saying-box-author[data-author="christine"]{background-image:url('/images/christine.png');}
 .people-saying-box-author > p{
   display:table-cell;
   vertical-align:middle;
@@ -515,7 +539,10 @@ header #logo{
   margin-left:1%;
   margin-bottom:1%;
   height:200px;
-  background-color:red;
+  background-color: #f2f2f2;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
   display:inline-block;
 }
 
@@ -542,3 +569,59 @@ header #logo{
   margin:0 6px;
   font-size:20px;
 }
+/**
+* footer
+*/
+footer{
+  background-color: #2A2A35;
+  padding:50px 0 100px;
+}
+#footer-info{
+  display: inline-block;
+  width:24%;
+  color:#fff;
+  margin-right: 1%;
+}
+#footer-info small{
+  color:#757596;
+}
+#footer-info-logo{
+  width:100%;
+  height:30px;
+  background: url('/images/logo.png') no-repeat left center;
+  background-size: contain;
+}
+#footer-getalerts{
+  display: inline-block;
+  width: 50%;
+}
+#footer-getalerts input,
+#footer-getalerts button{
+  height:80px;
+  font-size:22px;
+}
+#footer-getalerts input{
+  width:68%;
+  margin-right: 2%;
+}
+#footer-getalerts button{
+  width:30%;
+}
+#footer-links{
+  display:inline-block;
+  width: 20%;
+  text-align: right;
+}
+#footer-links a{
+  display: inline-block;
+  margin-top: 15px;
+  margin-left: 5px;
+  height:60px;
+  width:60px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100%;
+}
+#footer-link-twitter{background-image: url('/images/footer-twitter.png')}
+#footer-link-facebook{background-image: url('/images/footer-fb.png')}
+#footer-link-email{background-image: url('/images/footer-email.png')}
