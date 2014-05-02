@@ -118,6 +118,11 @@ header.fixed{
   position: fixed;
   background-color: #fff;
   height:60px;
+  top:-60px;
+}
+header.fixed.opened{
+  top:0;
+  transition:top .5s ease;
 }
 header #logo{
   display:inline-block;
@@ -308,6 +313,50 @@ header.fixed #logo{height:60px;}
   height: 100%;
   background:url('/images/large-funnel.png') no-repeat center;
   background-size:80% auto;
+	position:relative;
+}
+#funnel-entrance{
+	width:10px;
+	height:10px;
+	background-color:red;
+	position:absolute;
+	top:180px;
+	left:50%;
+}
+.funnel-item{
+	position:absolute;
+	background-repeat:no-repeat;
+	background-position:center;
+	background-size:contain;
+}
+.funnel-item.bubble-left{background-image:url('/images/animation/bubble-left.png');}
+.funnel-item.bubble-right{background-image:url('/images/animation/bubble-right.png');}
+.funnel-item.bird{background-image:url('/images/animation/bird.png');}
+.funnel-item.heart{background-image:url('/images/animation/heart.png');}
+.funnel-item.location{background-image:url('/images/animation/location.png');}
+.funnel-result{
+	position:absolute;
+	top:200px;
+	left:-40px;
+	width:80px;
+	height:0;
+	/*height:120px;*/
+	background-repeat:no-repeat;
+	background-size:auto 100%;
+	background-position:center;
+}
+.funnel-result.alert-1{background-image:url('/images/animation/alert-1.png');}
+.funnel-result.alert-2{background-image:url('/images/animation/alert-2.png');}
+.funnel-result.alert-3{background-image:url('/images/animation/alert-3.png');}
+.funnel-money{
+	position:absolute;
+	top:200px;
+	left:-13px;
+	width:26px;
+	/*height:50px;*/
+	height:0;
+	background:url('/images/animation/money.png') no-repeat center;
+	background-size:contain;
 }
 /* email function */
 #email-background{
