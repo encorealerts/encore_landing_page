@@ -1,5 +1,6 @@
 ﻿
 @import url('fonts/proxima-nova/stylesheet.css');
+@import url('fonts/roboto-slab/stylesheet.css');
 
 *{
   outline:none;
@@ -21,6 +22,12 @@ ul,li, button{
   padding:0;
   list-style-type:none;
 }
+h1, h2, h3, h4, h5, h6{
+  font-family:'roboto_slablight';
+}
+h1 b, h2 b, h3 b, h4 b, h5 b, h6 b{
+  font-family:'roboto_slabregular'; 
+}
 button{
   border:none;
   background-color:#E56857;
@@ -31,6 +38,7 @@ input{
   border:1px solid #D3D3D3;
   font-size:18px;
   text-align:center;
+  -moz-box-sizing:border-box;
   box-sizing:border-box;
 }
 ul{counter-reset:item;}
@@ -83,6 +91,11 @@ h3{
   color:#fff;
   font-size:20px;
   line-height:22px;
+}
+h4{
+  color:#fff;
+  font-size:18px;
+  line-height:20px; 
 }
 .title{margin-bottom:60px;}
 .subtitle{margin-bottom:20px;}
@@ -267,6 +280,9 @@ header.fixed #logo{height:60px;}
   width:32%;
   margin-right:2%;
   vertical-align:top;
+}
+.expertise-box b{
+  color:#1a1a1a;
 }
 .expertise-box:last-child{margin-right:0;}
 .expertise-box-content{
@@ -460,9 +476,9 @@ header.fixed #logo{height:60px;}
 #examples-content-trail.scroll-influencer :not([data-example="influencer"]){opacity:0;}
 #examples-content-trail.scroll-content :not([data-example="content"]){opacity:0;}
 #examples-content-trail.scroll-growth :not([data-example="growth"]){opacity:0;}
-[data-example="influencer"]{background-image:url('/images/influencer-alert.png');}
-[data-example="content"]{background-image:url('/images/content-alert.png');}
-[data-example="growth"]{background-image:url('/images/growth-alert.png');}
+[data-example="influencer"]{background-image:url('/images/influencer-alert.jpg');}
+[data-example="content"]{background-image:url('/images/content-alert.jpg');}
+[data-example="growth"]{background-image:url('/images/growth-alert.jpg');}
 
 
 
@@ -626,11 +642,14 @@ header.fixed #logo{height:60px;}
   color:#fff;
   margin-bottom:40px;
 }
-#why-encore p:after,
-#why-encore p:before{
-  content:'•';
-  margin:0 6px;
-  font-size:20px;
+.why-encore-item{
+  width:32%;
+  background-color: green;
+  display: inline-block;
+  margin-right:2%;
+}
+.why-encore-item:last-child{
+  margin-right:0;
 }
 /**
 * footer
