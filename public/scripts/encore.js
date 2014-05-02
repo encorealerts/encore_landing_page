@@ -208,7 +208,7 @@ $(function (){
     }
   }
   
-  $(window).on('DOMMouseScroll onmousewheel', function (e){
+  $(window).on('DOMMouseScroll wheel mousewheel', function (e){
     if (isAnimating){e.preventDefault();}
   });
   
