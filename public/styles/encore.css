@@ -316,9 +316,8 @@ header.fixed #logo{height:60px;}
 	position:relative;
 }
 #funnel-entrance{
-	width:10px;
-	height:10px;
-	background-color:red;
+	width:0;
+	height:0;
 	position:absolute;
 	top:180px;
 	left:50%;

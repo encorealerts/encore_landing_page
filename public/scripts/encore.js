@@ -102,11 +102,12 @@ $(function (){
       {type:'bubble-right', x:-160, y:-110, size:'small',   el:null,steps:[],oX:0,oY:0}
     ],
     funnelEntrance = $('#funnel-entrance'),
-    animationStepsLength = 1,
-    currentAnimationStep = 0,
-    lastScroll = 0, lockAnimation = false, preventScroll = false,
+    preventScroll = false,
     scrollStart = $('#funnel').offset().top - 200,
-    s = 50,
+    size = 50,
+    animationStartPosition = 0,
+    isAnimating = false,
+    animationToDo = true,
     animationsToDo = 0;
   
   elements.forEach(function (c){
@@ -118,13 +119,13 @@ $(function (){
         left:c.x + 'px'
       });
     if (c.size === 'smaller'){
-      element.width(s / 2).height(s / 2);
+      element.width(size / 2).height(size / 2);
     } else if (c.size === 'small'){
-      element.width(s).height(s);
+      element.width(size).height(size);
     } else if (c.size === 'medium'){
-      element.width(s * 2).height(s * 2);
+      element.width(size * 2).height(size * 2);
     } else {
-      element.width(s * 3).height(s * 3);
+      element.width(size * 3).height(size * 3);
     }
     if (c.size === 'large' && c.type === 'heart'){
       element.attr('id','xxx');
@@ -138,9 +139,7 @@ $(function (){
   function showAnimationResults(){
     $('.funnel-result').animate({height:'120px'}).promise().done(function (){
       $('.funnel-result.alert-2').animate({left:-150,top:130});
-      $('.funnel-result.alert-3').animate({left:70,top:130}, function (){
-        animationsToDo--;
-      });
+      $('.funnel-result.alert-3').animate({left:70,top:130}).promise().done(notifyAnimationEnd);
     });
     $('.funnel-money').animate({height:50}).promise().done(function (){
       $('.funnel-money:eq(0)').animate({left:-200,top:170});
@@ -153,9 +152,7 @@ $(function (){
   function hideAnimationResults(){
     $('.funnel-result.alert-2').animate({left:-50,top:200}, 150);
     $('.funnel-result.alert-3').animate({left:-50,top:200}, 150, function (){
-      $('.funnel-result').animate({height:'0'}, 150).promise().done( function (){
-        animationsToDo--;
-      });
+      $('.funnel-result').animate({height:'0'}, 150).promise().done(notifyAnimationEnd);
     });
     $('.funnel-money').animate({left:-13,top:200}).promise().done(function (){
       $('.funnel-money').animate({height:'0'}, 150);
@@ -163,25 +160,19 @@ $(function (){
   }
   
   function doAnimation(c, x, y, reverse){
-    if (reverse){
-      if (x !== c.oX || y !== c.oY){
-        $(c.el).show();
-      }
+    if (reverse && (x !== c.oX || y !== c.oY)){
+      $(c.el).show();
     }
     c.el.animate({left:x,top: y}, function (){
-      if (!reverse) {
-        if ($(this).position().left === c.oX && $(this).position().top === c.oY){
-          $(this).hide();
-        }
+      if (!reverse && ($(this).position().left === c.oX && $(this).position().top === c.oY)){
+        $(this).hide();
       }
-      animationsToDo--;
+      notifyAnimationEnd();
     });
   }
   
   function advanceIconsAnimation(){
-    console.log('ahead');
-    currentAnimationStep++;
-    animationsToDo = elements.length + 1;
+    onAnimationsStart(elements.length + 1); //amount of animations
     elements.forEach(function (c){
       doAnimation(c, c.oX, c.oY, false);
     });
@@ -191,9 +182,7 @@ $(function (){
   }
   
   function reduceIconsAnimation(){
-    console.log('back');
-    currentAnimationStep--;
-    animationsToDo = elements.length + 1;
+    onAnimationsStart(elements.length + 1); //amount of animations
     elements.forEach(function (c){
       doAnimation(c, c.x, c.y, true);
     });
@@ -202,30 +191,45 @@ $(function (){
     }, 100);
   }
   
+  function onAnimationsStart(amount){
+    animationsToDo = amount;
+    isAnimating = true;
+  }
+  
+  function onAnimationsEnd(){
+    isAnimating = false;
+    animationToDo = !animationToDo;
+  }
+  
+  function notifyAnimationEnd(){
+    animationsToDo--;
+    if (animationsToDo === 0){
+      onAnimationsEnd();
+    }
+  }
+  
+  $(window).on('DOMMouseScroll onmousewheel', function (e){
+    if (isAnimating){e.preventDefault();}
+  });
   
   $(window).on('scroll', function (e){
-    if (preventScroll){
-      preventScroll = false;
+    if (isAnimating){
+      e.preventDefault();
+      window.scrollTo(0, animationStartPosition);
       return;
     }
-    if ($(window).scrollTop() > scrollStart && currentAnimationStep < animationStepsLength){
-      lockAnimation = true;
-    } else if ($(window).scrollTop() <= scrollStart && currentAnimationStep > 0) {
-      lockAnimation = true;
-    } else if (animationsToDo === 0){
-      lockAnimation = false;
+    if ($(window).scrollTop() > scrollStart && animationToDo){
+      animationStartPosition = $(window).scrollTop();
+      advanceIconsAnimation();
+    } else if ($(window).scrollTop() < scrollStart && !animationToDo){
+      animationStartPosition = $(window).scrollTop();
+      reduceIconsAnimation();
     }
-    
-    if (lockAnimation){
-      if (animationsToDo === 0){
-        if ($(window).scrollTop() > scrollStart){
-          advanceIconsAnimation();
-        } else if ($(window).scrollTop() < scrollStart){
-          reduceIconsAnimation();
-        }
-      }
-      preventScroll = true;
-      window.scrollTo(0, scrollStart);
+  });
+  
+  $(window).on('keydown', function (e){
+    if (isAnimating && (e.keyCode === 40 /*up*/|| e.keyCode === 38 /*down*/|| e.keyCode === 36 /*home*/ || e.keyCode === 35/*end*/)){
+      e.preventDefault();
     }
   });
 });
