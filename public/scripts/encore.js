@@ -143,15 +143,15 @@ $(function (){
   });
   
   function showAnimationResults(){
-    $('.funnel-result').animate({height:mobile ? 90 : 120}).promise().done(function (){
-      $('.funnel-result.alert-2').animate({left:mobile ? -100 :-150,top:130});
-      $('.funnel-result.alert-3').animate({left:mobile ? 40 : 70,top:130}).promise().done(notifyAnimationEnd);
+    $('.funnel-result').animate({height:120}).promise().done(function (){
+      $('.funnel-result.alert-2').animate({left:-150,top:130});
+      $('.funnel-result.alert-3').animate({left:70,top:130}).promise().done(notifyAnimationEnd);
     });
-    $('.funnel-money').animate({height:mobile ? 40 : 50}).promise().done(function (){
-      $('.funnel-money:eq(0)').animate({left:mobile ? -140 : -200,top:170});
-      $('.funnel-money:eq(1)').animate({left:mobile ? -60 :-100,top:260});
-      $('.funnel-money:eq(2)').animate({left:mobile ? 34 : 74,top:260});
-      $('.funnel-money:eq(3)').animate({left:mobile ? 114: 174,top:170});
+    $('.funnel-money').animate({height:40 : 50}).promise().done(function (){
+      $('.funnel-money:eq(0)').animate({left:-140 : -200,top:170});
+      $('.funnel-money:eq(1)').animate({left:-60 :-100,top:260});
+      $('.funnel-money:eq(2)').animate({left:34 : 74,top:260});
+      $('.funnel-money:eq(3)').animate({left:114: 174,top:170});
     });
   }
   
@@ -219,6 +219,7 @@ $(function (){
   });
   
   $(window).on('scroll', function (e){
+    if (mobile){return;}
     if (isAnimating){
       e.preventDefault();
       window.scrollTo(0, animationStartPosition);
