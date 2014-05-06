@@ -4,11 +4,11 @@
 
 @font-face {
     font-family: 'proxima_nova_rgbold';
-    src: url('mark_simonson_-_proxima_nova_bold-webfont.eot');
-    src: url('mark_simonson_-_proxima_nova_bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('mark_simonson_-_proxima_nova_bold-webfont.woff') format('woff'),
-         url('mark_simonson_-_proxima_nova_bold-webfont.ttf') format('truetype'),
-         url('mark_simonson_-_proxima_nova_bold-webfont.svg#proxima_nova_rgbold') format('svg');
+    src: url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_bold-webfont.eot');
+    src: url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_bold-webfont.woff') format('woff'),
+         url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_bold-webfont.ttf') format('truetype'),
+         url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_bold-webfont.svg#proxima_nova_rgbold') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -19,11 +19,11 @@
 
 @font-face {
     font-family: 'proxima_nova_ltlight';
-    src: url('mark_simonson_-_proxima_nova_light-webfont.eot');
-    src: url('mark_simonson_-_proxima_nova_light-webfont.eot?#iefix') format('embedded-opentype'),
-         url('mark_simonson_-_proxima_nova_light-webfont.woff') format('woff'),
-         url('mark_simonson_-_proxima_nova_light-webfont.ttf') format('truetype'),
-         url('mark_simonson_-_proxima_nova_light-webfont.svg#proxima_nova_ltlight') format('svg');
+    src: url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_light-webfont.eot');
+    src: url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_light-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_light-webfont.woff') format('woff'),
+         url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_light-webfont.ttf') format('truetype'),
+         url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_light-webfont.svg#proxima_nova_ltlight') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -34,11 +34,11 @@
 
 @font-face {
     font-family: 'proxima_nova_rgregular';
-    src: url('mark_simonson_-_proxima_nova_regular-webfont.eot');
-    src: url('mark_simonson_-_proxima_nova_regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('mark_simonson_-_proxima_nova_regular-webfont.woff') format('woff'),
-         url('mark_simonson_-_proxima_nova_regular-webfont.ttf') format('truetype'),
-         url('mark_simonson_-_proxima_nova_regular-webfont.svg#proxima_nova_rgregular') format('svg');
+    src: url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_regular-webfont.eot');
+    src: url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_regular-webfont.woff') format('woff'),
+         url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_regular-webfont.ttf') format('truetype'),
+         url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_regular-webfont.svg#proxima_nova_rgregular') format('svg');
     font-weight: normal;
     font-style: normal;
 
@@ -49,11 +49,11 @@
 
 @font-face {
     font-family: 'proxima_nova_ththin';
-    src: url('mark_simonson_-_proxima_nova_thin-webfont.eot');
-    src: url('mark_simonson_-_proxima_nova_thin-webfont.eot?#iefix') format('embedded-opentype'),
-         url('mark_simonson_-_proxima_nova_thin-webfont.woff') format('woff'),
-         url('mark_simonson_-_proxima_nova_thin-webfont.ttf') format('truetype'),
-         url('mark_simonson_-_proxima_nova_thin-webfont.svg#proxima_nova_ththin') format('svg');
+    src: url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_thin-webfont.eot');
+    src: url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_thin-webfont.woff') format('woff'),
+         url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_thin-webfont.ttf') format('truetype'),
+         url('/styles/fonts/proxima-nova/mark_simonson_-_proxima_nova_thin-webfont.svg#proxima_nova_ththin') format('svg');
     font-weight: normal;
     font-style: normal;
 

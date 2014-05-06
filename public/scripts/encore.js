@@ -1,6 +1,10 @@
 $(function (){
 
-  var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) && ($(window).width() < 960);
+  var mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || ($(window).width() < 960);
+
+  $(window).on('resize', function (){
+    mobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || ($(window).width() < 960);
+  });
 
   $('.examples-menu-item').on('click', function (){
     $(this).siblings().removeClass('active');

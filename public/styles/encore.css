@@ -1,8 +1,4 @@
-﻿
-@import url('fonts/proxima-nova/stylesheet.css');
-@import url('fonts/roboto-slab/stylesheet.css');
-
-*{
+﻿*{
   outline:none;
   font-family:proxima_nova_ltlight;
 }
@@ -13,7 +9,8 @@ body{
   min-width:1024px;
 }
 
-@media handheld and (min-resolution: 1dppx),
+@media 
+handheld and (min-resolution: 1dppx),
 handheld and (-webkit-min-device-pixel-ratio: 1){
   html, body{
     font-size:100%;
@@ -752,17 +749,17 @@ header.fixed #logo{height:60px;}
   text-align:left;
   padding:2% 2% 2% 3%;
   vertical-align:top;
-  height:180px;
+  height:200px;
   margin-bottom:45px;
 }
 .people-saying-box:after{
   content:'';
-  height:calc(100% + 30px);
   width:5px;
   position:absolute;
   background-color:#CCEFA5;
   top:0;
   left:0;
+  bottom: -30px;
 }
 .people-saying-box:before{
   position:absolute;
@@ -788,7 +785,7 @@ header.fixed #logo{height:60px;}
   padding-left:80px;
   background-position:left center;
   background-repeat:no-repeat;
-  background-size:auto 80px;
+  background-size:auto 60px;
 }
 .people-saying-box-author[data-author="anupam"]{background-image:url('/images/anupam.png');}
 .people-saying-box-author[data-author="sonny"]{background-image:url('/images/sonny.png');}
@@ -849,8 +846,9 @@ header.fixed #logo{height:60px;}
   #people-saying-headline{width: 100%;}
   #people-saying-media{width: 100%;}
   #people-saying-media > a{
+    margin-top: 2%;
     height: 60px;
-    background-size:87% auto;
+    background-size:contain;
   }
   #people-saying-media-wbj{width:30%;}
   #people-saying-media-wp{width:30%;}
@@ -892,7 +890,6 @@ header.fixed #logo{height:60px;}
   margin-left:1%;
   margin-bottom:1%;
   height:200px;
-  background-color: #f2f2f2;
   background-position: center;
   background-size: contain;
   background-repeat: no-repeat;
@@ -918,7 +915,7 @@ header.fixed #logo{height:60px;}
     display: block;
     margin-left: inherit;
     height:160px;
-    background-size: cover;
+    background-size: contain;
   }
 }
 
