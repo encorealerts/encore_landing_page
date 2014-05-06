@@ -35,7 +35,17 @@ app.configure(function (){
   app.use(assetManager(assetManagerGroups)); 
   // compress + cache
   app.use(express.compress());
+
+  app.use(function (req, res, next) { 
+    if (/images\/|styles\/|scripts\//.test(req.url)) {
+      res.setHeader('Cache-Control', 'public, max-age=' + oneYear);
+      res.setHeader('Expires', new Date(Date.now() + oneYear).toUTCString());
+    }
+    return next();
+  });
+
   app.use(express.static(__dirname + '/public', {maxAge: oneYear}));
+
   // body parser
   app.use(express.bodyParser());
   // routes
