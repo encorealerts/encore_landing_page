@@ -340,7 +340,7 @@ header.fixed #logo{height:60px;}
 #cover{
   height:450px;
   padding:150px 0 100px;
-  background:url('/images/cover.jpg') no-repeat center;
+  background:url('/images/cover.jpg') no-repeat top center;
   background-size:cover;
 }
 #cover-center{
@@ -372,6 +372,7 @@ header.fixed #logo{height:60px;}
   #cover{
     height: inherit;
     padding:20% 0  10%;
+    background-size:auto 150%;
   }
   #cover-center{
     width: 100%;
@@ -496,6 +497,9 @@ header.fixed #logo{height:60px;}
   .expertise-box-content{
     height: inherit;
   }
+  .expertise-box-icon{
+    height: 100px;
+  }
 }
 /**
 * how encore works
@@ -603,6 +607,21 @@ header.fixed #logo{height:60px;}
 @media handheld, screen and (max-width:960px){
   #email-function{
     padding: 10% 0;
+    position: relative;
+  }
+  #email-function:before{
+    content:'';
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background:url('/images/gmail-screenshot.png') no-repeat top center;
+    background-size: cover;
+  }
+  #email-background{
+    display: none;
   }
 }
 
@@ -820,11 +839,22 @@ header.fixed #logo{height:60px;}
   .people-saying-box{
     width: 100%;
     display: block; 
+    height: auto;
+    padding-bottom: 100px;
   }
   .people-saying-box-author{
     font-size:80%;
     background-size: auto 60px;
   }
+  #people-saying-headline{width: 100%;}
+  #people-saying-media{width: 100%;}
+  #people-saying-media > a{
+    height: 60px;
+    background-size:87% auto;
+  }
+  #people-saying-media-wbj{width:30%;}
+  #people-saying-media-wp{width:30%;}
+  #people-saying-media-tc{width:30%;}
 }
 /*
 * 
@@ -927,6 +957,9 @@ header.fixed #logo{height:60px;}
 @media handheld, screen and (max-width:960px){
   #why-encore{
     padding: 10% 0;
+  }
+  #why-encore-logo{
+    margin-bottom: 5%;
   }
   .why-encore-item{
     display: block;
@@ -1037,4 +1070,4 @@ footer a {
 }
 #footer-link-twitter{background-image: url('/images/footer-twitter.png')}
 #footer-link-facebook{background-image: url('/images/footer-fb.png')}
-#footer-link-blog{background-image: url('/images/footer-email.png')}
+#footer-link-blog{background-image: url('/images/blog.png')}

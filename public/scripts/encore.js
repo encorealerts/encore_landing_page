@@ -147,11 +147,11 @@ $(function (){
       $('.funnel-result.alert-2').animate({left:-150,top:130});
       $('.funnel-result.alert-3').animate({left:70,top:130}).promise().done(notifyAnimationEnd);
     });
-    $('.funnel-money').animate({height:40 : 50}).promise().done(function (){
-      $('.funnel-money:eq(0)').animate({left:-140 : -200,top:170});
-      $('.funnel-money:eq(1)').animate({left:-60 :-100,top:260});
-      $('.funnel-money:eq(2)').animate({left:34 : 74,top:260});
-      $('.funnel-money:eq(3)').animate({left:114: 174,top:170});
+    $('.funnel-money').animate({height:50}).promise().done(function (){
+      $('.funnel-money:eq(0)').animate({left:-200,top:170});
+      $('.funnel-money:eq(1)').animate({left:-100,top:260});
+      $('.funnel-money:eq(2)').animate({left:74,top:260});
+      $('.funnel-money:eq(3)').animate({left:174,top:170});
     });
   }
   
