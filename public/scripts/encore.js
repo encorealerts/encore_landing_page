@@ -13,6 +13,13 @@ $(function (){
     $('#examples-content-trail').addClass('scroll-' + $(this).attr('data-image'));
   }).first().trigger('click');
 
+  $('#top-tour-button').on('click', function (e){
+    var hash = $(this).attr('href');
+    e.preventDefault();
+    $('html, body').animate({scrollTop:$(hash).position().top});
+    window.location.hash = hash;
+  });
+
   var blogPosts = [
     {
       img:'/images/blog/3-reasons.png',

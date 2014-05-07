@@ -6,10 +6,15 @@
     <!--[if IE 9]>
       <meta http-equiv="X-UA-Compatible" content="IE=9" >
     <![endif]-->
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="Encore identifies key mentions and trends in real time and prompts you to act when it counts most.">
     <meta name="robots" content="index,follow">
-    <meta name="author" content="EncoreHQ">
+
+    <!-- fb meta tags -->
+    <meta property="og:title" content="Big marketing opportunities in simple, bite-sized pieces">
+    <meta property="og:description" content="Encore identifies key mentions and trends in real time and prompts you to act when it counts most.">
+    <meta property="og:type" content="website">       
+    <meta property="og:image" content="http://www.encorehq.com/images/encore_square.png">
+    <meta property="og:url" content="http://www.encorehq.com">
 
     <link type="icon" href="favicon.ico" />
     <title>EncoreHQ</title>
@@ -27,14 +32,14 @@
       <div class="inner-wrapper">
         <div id="logo"></div>
         <div id="top-links">
-          <a href="#" id="top-tour-button"><b>tour</b></a>
-          <a href="#" id="top-blog-button"><b>blog</b></a>
+          <a href="#expertise" id="top-tour-button"><b>tour</b></a>
+          <a href="http://blog.encorehq.com/" target="_blank" id="top-blog-button"><b>blog</b></a>
           <div id="top-social-buttons">
-            <a href="#" id="top-twitter-button">twitter</a>
-            <a href="#" id="top-fb-button">fb</a>
+            <a href="http://twitter.com/encore" target="_blank" id="top-twitter-button">twitter</a>
+            <a href="http://facebook.com/encorehq" target="_blank" id="top-fb-button">fb</a>
           </div>
-          <a href="#" id="top-login-button"><b>login</b></a>
-          <a href="#" id="top-getalerts-button"><b>get alerts</b></a>
+          <a href="#" target="_blank" id="top-login-button"><b>login</b></a>
+          <a href="#" target="_blank" id="top-getalerts-button"><b>get alerts</b></a>
         </div>
       </div>
     </header>
@@ -286,18 +291,30 @@
         <p>Arlington, VA 22209</p>
         <a href="mailto:hello@encorehq.com" target="_blank"><b>hello@encorehq.com</b></a>
         <div id="footer-links">
-          <a href="#" id="footer-link-twitter"></a>
-          <a href="#" id="footer-link-facebook"></a>
-          <a href="#" id="footer-link-blog"></a>
+          <a href="http://twitter.com/encore" target="_blank" id="footer-link-twitter"></a>
+          <a href="http://facebook.com/encorehq" target="_blank" id="footer-link-facebook"></a>
+          <a href="http://blog.encorehq.com/" target="_blank" id="footer-link-blog"></a>
         </div>
         <small>© Encore HQ</small>
       </div>
     </footer>
-    <% if (production){ %>
+    <% if (production) { %>
       <script src="/encore.min.js"></script>
     <% } else { %>
       <script src="/scripts/jquery-2.1.0.min.js"></script>
       <script src="/scripts/encore.js"></script>
     <% } %>
+    <script type="text/javascript">
+      var _gaq = _gaq || [];
+      var pluginUrl =  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+        _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+        _gaq.push(['_setAccount', 'UA-33600528-1']);
+        _gaq.push(['_trackPageview']);
+      (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+        ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+      })();
+    </script>
   </body>
 </html>
