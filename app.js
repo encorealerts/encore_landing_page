@@ -3,8 +3,9 @@ var
   express = require('express'),
   app = express(),
   assetManager = require('connect-assetmanager'),
-	oneYear = 31556908800,
-  production = !!process.env.PORT,
+  oneYear = 31556908800,
+  //production = !!process.env.PORT,
+  production = true,
   mime = require('mime');
 
 var assetManagerGroups = {
@@ -22,7 +23,7 @@ var assetManagerGroups = {
     'route': /\/encore\.min\.js/,
     'path': __dirname + '/public/scripts/',
     'dataType': 'javascript',
-    'files': [ 'jquery-2.1.0.min.js', 'encore.js' ],
+    'files': [ 'hubspot.js', 'jquery-2.1.0.min.js', 'encore.js' ],
     'stale':!!process.env.PORT,
     'debug':!process.env.PORT
   }
@@ -52,10 +53,10 @@ app.configure(function (){
   app.use(app.router);
   //mime types
   mime.define({
-		'application/octet-stream': ['ttf'],
-		'image/svg+xml': ['svg'],
-		'application/vnd.ms-fontobject': ['eot'],
-		'application/x-font-woff': ['woff']
+    'application/octet-stream': ['ttf'],
+    'image/svg+xml': ['svg'],
+    'application/vnd.ms-fontobject': ['eot'],
+    'application/x-font-woff': ['woff']
   });
 });
 
@@ -64,4 +65,5 @@ app.get('/', function (req, res){
   res.render('index', {production: production});
 });
 
-app.listen(process.env.PORT || 3456);
+//app.listen(process.env.PORT || 3456);
+app.listen(8080);
