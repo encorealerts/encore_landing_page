@@ -354,6 +354,9 @@ header.fixed #logo{height:60px;}
   color:#373E47;
   margin-bottom:20px;
 }
+#cover-center form{
+  width: 100%;
+}
 #cover-center input{
   height:80px;
   width:60%;

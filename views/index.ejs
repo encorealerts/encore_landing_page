@@ -38,8 +38,8 @@
             <a href="http://twitter.com/encore" target="_blank" id="top-twitter-button">twitter</a>
             <a href="http://facebook.com/encorehq" target="_blank" id="top-fb-button">fb</a>
           </div>
-          <a href="#" target="_blank" id="top-login-button"><b>login</b></a>
-          <a href="#" target="_blank" id="top-getalerts-button"><b>get alerts</b></a>
+          <a href="http://feed.encorealert.com" target="_blank" id="top-login-button"><b>login</b></a>
+          <a href="http://info.encorealert.com/home-page" target="_blank" id="top-getalerts-button"><b>get alerts</b></a>
         </div>
       </div>
     </header>
@@ -50,8 +50,10 @@
           <h1>The right social opportunities at just the right time</h1>
           <p>Encore Alert continually identiﬁes key mentions and trends from your brand's social media and sends you proactive alerts with recommended actions.</p>
           <div class="get-alerts">
-            <input type="text" placeholder="Your twitter handle" />
-            <button>Get Alerts</button>
+            <form action="http://info.encorealert.com/home-page" method="get" target="_blank" novalidate>
+              <input type="text" name="twitterhandle" placeholder="Your twitter handle" />
+              <button type="submit">Get Alerts</button>
+            </form>
           </div>
         </div>
       </div>
@@ -234,8 +236,10 @@
         <div id="blog-presentation">
           <h1 class="subtitle">Our Blog</h1>
           <p>Stay Up-to-Date with our blog ﬁlled with information about the latest marketing trends, data, tips on taking action on opportunities, and more.</p>
-          <input type="text" placeholder="Your email address" />
-          <button>Subscribe to our blog</button>
+          <form action="http://encorehq.us4.list-manage.com/subscribe/post?u=8e3c2b58215498ae7d20ace81&amp;id=899d9e4318" method="post" target="_blank" novalidate>
+            <input type="email" name="EMAIL" placeholder="Your email address" />
+            <button type="submit">Subscribe to our blog</button>
+          </form>
         </div>
         <div id="blog-content">
           <a target="_blank" class="blog-content-box"></a>
@@ -262,7 +266,7 @@
       </div>
     </section>
 
-    <section id="let-us-help">
+    <section id="let-us-help" style="display:none;">
       <div class="inner-wrapper">
         <h1 class="title">Let us help you get started.</h1>
         <div class="let-us-help-item" data-help="1">
