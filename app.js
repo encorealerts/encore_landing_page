@@ -4,7 +4,7 @@ var
   app = express(),
   assetManager = require('connect-assetmanager'),
   oneYear = 31556908800,
-  //production = !!process.env.PORT,
+  production = !!process.env.PORT,
   production = true,
   mime = require('mime');
 
@@ -65,5 +65,4 @@ app.get('/', function (req, res){
   res.render('index', {production: production});
 });
 
-//app.listen(process.env.PORT || 3456);
-app.listen(8080);
+app.listen(process.env.PORT || 3456);
