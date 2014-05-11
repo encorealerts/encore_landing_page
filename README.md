@@ -1,4 +1,2 @@
-encorehq
-========
-
 encore website
+==============
