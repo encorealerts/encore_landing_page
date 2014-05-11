@@ -5,7 +5,6 @@ var
   assetManager = require('connect-assetmanager'),
   oneYear = 31556908800,
   production = !!process.env.PORT,
-  production = true,
   mime = require('mime');
 
 var assetManagerGroups = {
