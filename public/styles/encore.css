@@ -472,7 +472,7 @@ header.fixed #logo{height:60px;}
   color:#474E5B;
   padding:5%;
 }
-.expertise-box:first-child h4{letter-spacing: -1.5px;}
+.expertise-box:first-child h4{letter-spacing: -0.09em;}
 .expertise-box:first-child .expertise-box-content{border-left:3px solid #7CC183;}
 .expertise-box:nth-child(2) .expertise-box-content{border-left:3px solid #7789AF;}
 .expertise-box:nth-child(3) .expertise-box-content{border-left:3px solid #E56857;}
