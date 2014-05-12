@@ -66,7 +66,7 @@ window.FunnelAnimation = (function (){
     ],
     funnelEntrance,
     preventScroll = false,
-    scrollStart,
+    scrollStart, stop = true,
     size = 50,
     animationStartPosition = 0,
     isAnimating = false,
@@ -184,9 +184,12 @@ window.FunnelAnimation = (function (){
       
       $(window).on('scroll.animation', function (e){
         if (isMobile){return;}
-        if (isAnimating){
+        if (isAnimating && stop){
           e.preventDefault();
           window.scrollTo(0, animationStartPosition);
+          return;
+        }
+        if (!stop){
           return;
         }
         if ($(window).scrollTop() > scrollStart && animationToDo){
@@ -202,6 +205,13 @@ window.FunnelAnimation = (function (){
         if (isAnimating && (e.keyCode === 40 /*up*/|| e.keyCode === 38 /*down*/|| e.keyCode === 36 /*home*/ || e.keyCode === 35/*end*/)){
           e.preventDefault();
         }
+      });
+    },
+
+    scrollPageWithoutStops: function (v){
+      stop = false;
+      $('body, html').animate({scrollTop:v}, function (){
+        stop = true;
       });
     }
   };

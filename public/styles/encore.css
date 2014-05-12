@@ -87,10 +87,6 @@ li{
   margin-bottom:50px;
   display:table;
 }
-.smallcaps{
-  font-variant: small-caps;
-  font-size: 14px;
-}
 li p{
   width:calc(100% - 60px);
   padding-left:10px;
@@ -476,7 +472,7 @@ header.fixed #logo{height:60px;}
   color:#474E5B;
   padding:5%;
 }
-.expertise-box:first-child h4{letter-spacing: -1px;}
+.expertise-box:first-child h4{letter-spacing: -1.5px;}
 .expertise-box:first-child .expertise-box-content{border-left:3px solid #7CC183;}
 .expertise-box:nth-child(2) .expertise-box-content{border-left:3px solid #7789AF;}
 .expertise-box:nth-child(3) .expertise-box-content{border-left:3px solid #E56857;}
@@ -802,6 +798,10 @@ header.fixed #logo{height:60px;}
   display:table-cell;
   vertical-align:middle;
   font-size:16px;
+}
+.people-saying-box-author > p span{
+  text-transform: uppercase;
+  font-size: 14px;
 }
 .people-saying-box-author[data-author="tina"] p{
   line-height: 18px;
