@@ -88,6 +88,12 @@ $(function (){
     window.location.hash = hash;
   });
 
+  $('#logo').on('click', function (e){
+    e.preventDefault();
+    $('html, body').animate({scrollTop:0});
+    window.location.hash = '';
+  })
+
   $(window).on('scroll.header', function (){
     if (isMobile){
       return;

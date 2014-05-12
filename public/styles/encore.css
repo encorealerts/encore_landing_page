@@ -87,6 +87,10 @@ li{
   margin-bottom:50px;
   display:table;
 }
+.smallcaps{
+  font-variant: small-caps;
+  font-size: 14px;
+}
 li p{
   width:calc(100% - 60px);
   padding-left:10px;
@@ -792,12 +796,15 @@ header.fixed #logo{height:60px;}
 }
 .people-saying-box-author[data-author="anupam"]{background-image:url('/images/anupam.png');}
 .people-saying-box-author[data-author="sonny"]{background-image:url('/images/sonny.png');}
-.people-saying-box-author[data-author="tine"]{background-image:url('/images/tina.png');}
+.people-saying-box-author[data-author="tina"]{background-image:url('/images/tina.png');}
 .people-saying-box-author[data-author="christine"]{background-image:url('/images/christine.png');}
 .people-saying-box-author > p{
   display:table-cell;
   vertical-align:middle;
   font-size:16px;
+}
+.people-saying-box-author[data-author="tina"] p{
+  line-height: 18px;
 }
 #people-saying-headline{
   border-style:solid;
