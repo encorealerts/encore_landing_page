@@ -470,12 +470,12 @@ header.fixed #logo{height:60px;}
   text-align:left;
   height:200px;
   color:#474E5B;
-  padding:4%;
+  padding:5%;
 }
+.expertise-box:first-child h4{letter-spacing: -1px;}
 .expertise-box:first-child .expertise-box-content{border-left:3px solid #7CC183;}
 .expertise-box:nth-child(2) .expertise-box-content{border-left:3px solid #7789AF;}
 .expertise-box:nth-child(3) .expertise-box-content{border-left:3px solid #E56857;}
-.expertise-box-content p{margin-bottom:2px;}
 .expertise-box-icon{
   height:180px;
   background-repeat: no-repeat;
@@ -500,6 +500,7 @@ header.fixed #logo{height:60px;}
   .expertise-box-icon{
     height: 100px;
   }
+  .expertise-box:first-child h4{letter-spacing: inherit;}
 }
 /**
 * how encore works
