@@ -588,7 +588,8 @@ header.fixed #logo{height:60px;}
   position: fixed;
   z-index:-1;
   width: 100%;
-  background: url('/images/gmail-screenshot.png') no-repeat center;
+  background-position:center;
+  background-repeat: no-repeat;
   background-size: cover;
   top:0;
   bottom:0;
@@ -618,7 +619,8 @@ header.fixed #logo{height:60px;}
     left: 0;
     right: 0;
     z-index: -1;
-    background:url('/images/gmail-screenshot.png') no-repeat top center;
+    background-position:top center;
+    background-image: url('/images/gmail-screenshot.png');
     background-size: cover;
   }
   #email-background{
@@ -708,9 +710,6 @@ header.fixed #logo{height:60px;}
 #examples-content-trail.scroll-influencer :not([data-example="influencer"]){opacity:0;}
 #examples-content-trail.scroll-content :not([data-example="content"]){opacity:0;}
 #examples-content-trail.scroll-growth :not([data-example="growth"]){opacity:0;}
-[data-example="influencer"]{background-image:url('/images/influencer-alert.jpg');}
-[data-example="content"]{background-image:url('/images/content-alert.jpg');}
-[data-example="growth"]{background-image:url('/images/growth-alert.jpg');}
 @media handheld, screen and (max-width:960px){
   #examples{
     padding:10% 0;

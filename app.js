@@ -22,7 +22,12 @@ var assetManagerGroups = {
     'route': /\/encore\.min\.js/,
     'path': __dirname + '/public/scripts/',
     'dataType': 'javascript',
-    'files': [ 'hubspot.js', 'jquery-2.1.0.min.js', 'encore.js' ],
+    'files': [ 
+      'hubspot.js', 
+      'jquery-2.1.0.min.js', 
+      'funnel-animation.js',
+      'encore.js' 
+    ],
     'stale':!!process.env.PORT,
     'debug':!process.env.PORT
   }
