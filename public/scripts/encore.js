@@ -33,9 +33,14 @@ $(function (){
     } else {
       if (!webFilesLoaded){
         loadWebFiles();
+        FunnelAnimation.init();
       }
     }
   });
+
+  if (!isMobile){
+    FunnelAnimation.init();
+  }
 
   function loadMobileFiles(){
     mobileFilesLoaded = true;
@@ -55,19 +60,18 @@ $(function (){
     $('[data-example="influencer"]').css('background-image', 'url("/images/influencer-alert.jpg")');
     $('[data-example="content"]').css('background-image', 'url("/images/content-alert.jpg")');
     $('[data-example="growth"]').css('background-image', 'url("/images/growth-alert.jpg")');
-    FunnelAnimation.init();
   }
 
   $(window).on('load', function (){
-    $('.blog-content-box').each(function (i){
-      $(this).css('background-image', 'url(' + blogPosts[i].img + ')');
-      $(this).attr('href', blogPosts[i].url)
-    });
     if (isMobile){
       loadMobileFiles();
     } else {
       loadWebFiles();
     }
+    $('.blog-content-box').each(function (i){
+      $(this).css('background-image', 'url(' + blogPosts[i].img + ')');
+      $(this).attr('href', blogPosts[i].url)
+    });
   });
 
   $('.examples-menu-item').on('click', function (){

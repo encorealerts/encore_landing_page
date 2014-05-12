@@ -28,8 +28,8 @@ var assetManagerGroups = {
       'funnel-animation.js',
       'encore.js' 
     ],
-    'stale':!!process.env.PORT,
-    'debug':!process.env.PORT
+    'stale':!!production,
+    'debug':!production
   }
 };
 
