@@ -9,7 +9,7 @@ var
 
 var assetManagerGroups = {
   'css': {
-    'route': /\/all\-2\.css/,
+    'route': /\/encore\.min\.css/,
     'path': __dirname + '/public/styles/',
     'dataType': 'css',
     'files': [ 
