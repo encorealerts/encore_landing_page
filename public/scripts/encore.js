@@ -88,16 +88,13 @@ $(function (){
     window.location.hash = hash;
   });
 
-  function increateTweetsFiltered(){
-    $('#clients-tweets-filtered-counter').text(++tweetsFiltered);
-  }
-
   (function (){
     var
       calcDate = new Date().setDate(13,05,2014),
       today = new Date().getTime(),
       days = (today - calcDate) / 86400000,
       tweetsFiltered = 7507395 + (60000 * days);
+    $('#clients-tweets-filtered-counter').text('');
     $('#clients-tweets-filtered-counter').text(tweetsFiltered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
     setInterval(function (){
       $('#clients-tweets-filtered-counter').text((++tweetsFiltered).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
