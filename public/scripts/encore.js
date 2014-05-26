@@ -72,6 +72,13 @@ $(function (){
       $(this).css('background-image', 'url(' + blogPosts[i].img + ')');
       $(this).attr('href', blogPosts[i].url)
     });
+
+    setTimeout(function (){
+      var script = document.createElement('script');
+      script.src = '/scripts/olark.js';
+      script.type = 'text/javascript';
+      document.body.appendChild(script);
+    }, 500);
   });
 
   $('.examples-menu-item').on('click', function (){
