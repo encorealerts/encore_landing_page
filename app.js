@@ -23,7 +23,7 @@ var assetManagerGroups = {
     'path': __dirname + '/public/scripts/',
     'dataType': 'javascript',
     'files': [ 
-      'hubspot.js', 
+      //'hubspot.js', 
       'jquery-2.1.0.min.js', 
       'funnel-animation.js',
       'encore.js' 
