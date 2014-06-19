@@ -71,7 +71,7 @@ app.get('/', function (req, res){
 
 // blog
 app.get('/blog', function (req, res){
-  res.redirect(200, 'http://blog.encorealert.com');
+  res.redirect(301, 'http://blog.encorealert.com');
 });
 
 app.listen(process.env.PORT || 3456);
