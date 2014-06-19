@@ -69,4 +69,9 @@ app.get('/', function (req, res){
   res.render('index', {production: production});
 });
 
+// blog
+app.get('/blog', function (req, res){
+  req.redirect('http://blog.encorealert.com');
+});
+
 app.listen(process.env.PORT || 3456);
