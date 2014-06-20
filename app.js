@@ -66,7 +66,7 @@ app.configure(function (){
 
 // routes
 app.get('/', function (req, res){
-  res.render('index', {production: production, vars: b});
+  res.render('index', {production: production});
 });
 
 if (process.env.PORT && process.env.DYNO){
