@@ -66,7 +66,11 @@ app.configure(function (){
 
 // routes
 app.get('/', function (req, res){
-  res.render('index', {production: production});
+  var b = [];
+  for (var v in process.env){
+    b.push({name:String(v), val:process.env[v]});
+  }
+  res.render('index', {production: production, vars: b});
 });
 
 app.listen(process.env.PORT || 3456);
