@@ -73,4 +73,9 @@ app.get('/', function (req, res){
   res.render('index', {production: production, vars: b});
 });
 
-app.listen(process.env.PORT || 3456);
+if (process.env.PORT && process.env.DYNO){
+  app.listen(process.env.PORT);
+} else {
+  // amazon and localhost
+  app.listen(3456);
+}
