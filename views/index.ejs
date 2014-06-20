@@ -26,14 +26,6 @@
       <link href="/styles/fonts/roboto-slab/stylesheet.css" rel="stylesheet" type="text/css" />
       <link href="/styles/encore.css" rel="stylesheet" type="text/css" />
     <% } %>
-
-    <% if (vars){ %>
-      <script>
-        <% for (var i = 0; i < vars.length; i++){ %>
-          console.log('name: <%= vars[i].name %> value: <%= vars[i].val %>');
-        <% } %>
-      </script>
-    <% } %>
   </head>
   <body>
     <header>

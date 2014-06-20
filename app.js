@@ -66,10 +66,6 @@ app.configure(function (){
 
 // routes
 app.get('/', function (req, res){
-  var b = [];
-  for (var v in process.env){
-    b.push({name:String(v), val:process.env[v]});
-  }
   res.render('index', {production: production, vars: b});
 });
 
