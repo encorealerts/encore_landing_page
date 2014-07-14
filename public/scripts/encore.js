@@ -7,16 +7,16 @@ $(function (){
   var blogPosts = [
     {
       img:'/images/blog/3-reasons.png',
-      url:'http://blog.encorehq.com/3-reasons-influencer-marketing/'
+      url:'http://encorealert.com/blog/3-reasons-influencer-marketing/'
     },{
       img:'/images/blog/6-ways-love-brand.png',
-      url:'http://blog.encorehq.com/customer-delight/'
+      url:'http://encorealert.com/blog/customer-delight/'
     },{ 
       img:'/images/blog/real-time-awesome.png',
-      url:'http://blog.encorehq.com/reactive-proactive-3-case-studies-will-remind-real-time-marketing-awesome/'
+      url:'http://encorealert.com/blog/reactive-proactive-3-case-studies-will-remind-real-time-marketing-awesome/'
     },{
       img:'/images/blog/why-how-what.png',
-      url:'http://blog.encorehq.com/3-keys-clear-effective-message-2/'
+      url:'http://encorealert.com/blog/3-keys-clear-effective-message-2/'
     }];
 
   function detectMobile(){
