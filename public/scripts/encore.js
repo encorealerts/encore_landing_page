@@ -97,14 +97,18 @@ $(function (){
 
   (function (){
     var
-      calcDate = new Date().setDate(7,12,2014),
+      calcDate = new Date().setDate(03,05,2014),
       today = new Date().getTime(),
+      base = 438507395,
+      tweetsPerDay = 1000000,
+      tweetsPerSecond = Math.round(tweetsPerDay / 24 / 60 / 60),
       days = (today - calcDate) / 86400000,
-      tweetsFiltered = Math.round(38507395 + (430000 * days));
+      tweetsFiltered = Math.round(base + (tweetsPerDay * days));
+    $('#clients-tweets-filtered-counter').text(tweetsFiltered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
+    setInterval(function (){
+      tweetsFiltered += tweetsPerSecond;
       $('#clients-tweets-filtered-counter').text(tweetsFiltered.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-      setInterval(function (){
-        $('#clients-tweets-filtered-counter').text((++tweetsFiltered).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ","));
-      }, 200);
+    }, 1000);
   }());
 
   $('#logo').on('click', function (e){
