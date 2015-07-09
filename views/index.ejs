@@ -27,6 +27,7 @@
       <link href="/styles/encore.css" rel="stylesheet" type="text/css" />
     <% } %>
   </head>
+
   <body>
     <header>
       <div class="inner-wrapper">
@@ -39,10 +40,18 @@
             <a href="https://www.facebook.com/encorealert" target="_blank" id="top-fb-button"></a>
           </div>
           <a href="http://feed.encorealert.com" target="_blank" id="top-login-button"><b>login</b></a>
-          <a href="http://feed.encorealert.com/onboarding/#/onboarding" target="_blank" id="top-getalerts-button"><b>get alerts</b></a>
+          <a href="#cover" id="top-getalerts-button"><b>get alerts</b></a>
         </div>
       </div>
     </header>
+
+    <div style="display:none;">
+      <iframe name="hubspot_frame"></iframe>
+      <form action="https://forms.hubspot.com/uploads/form/v2/396218/a2a9073d-928a-4482-bc27-33ef90ce6c82" id="submit-hubspot-contact" method="POST" target="hubspot_frame">
+        <input type="email" name="email" />
+        <input type="hidden" name="hs_context" />
+      </form>
+    </div>
     
     <section id="cover">
       <div class="inner-wrapper">
@@ -50,8 +59,8 @@
           <h1>The right social opportunities at just the right time</h1>
           <p>Encore Alert continually identiﬁes key mentions and trends from your brand's social media and sends you proactive alerts with recommended actions.</p>
           <div class="get-alerts">
-            <form action="http://feed.encorealert.com/onboarding/#/onboarding" method="get" target="_blank" novalidate>
-              <input type="text" name="twitterhandle" placeholder="Your twitter handle" />
+            <form action="/" id="contact-form">
+              <input type="email" name="email" placeholder="Your email" required="required" />
               <button type="submit">Get Alerts</button>
             </form>
           </div>
@@ -313,6 +322,9 @@
       <script src="/scripts/funnel-animation.js"></script>
       <script src="/scripts/encore.js"></script>
     <% } %>
+    <script>
+      window._IP = '<%= ip %>';
+    </script>
     <% if (production) { %>
       <script type="text/javascript">
         var _gaq = _gaq || [];

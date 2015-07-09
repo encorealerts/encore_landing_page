@@ -66,7 +66,7 @@ app.configure(function (){
 
 // routes
 app.get('/', function (req, res){
-  res.render('index', {production: production});
+  res.render('index', {production: production, ip: req.connection.remoteAddress});
 });
 
 if (process.env.PORT && process.env.DYNO){

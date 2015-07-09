@@ -24,14 +24,17 @@ $(function (){
   }
   detectMobile();
 
+  $('#top-getalerts-button').hide();
+
   $(window).on('resize', function (){
     detectMobile();
-    if (isMobile){
+    if (isMobile) {
+      $('#top-getalerts-button').hide();
       if (!mobileFilesLoaded){
         loadMobileFiles();
       }
     } else {
-      if (!webFilesLoaded){
+      if (!webFilesLoaded) {
         loadWebFiles();
         FunnelAnimation.init();
       }
@@ -88,7 +91,7 @@ $(function (){
     $('#examples-content-trail').addClass('scroll-' + $(this).attr('data-image'));
   }).first().trigger('click');
 
-  $('#top-tour-button').on('click', function (e){
+  $('#top-tour-button, #top-getalerts-button').on('click', function (e){
     var hash = $(this).attr('href');
     e.preventDefault();
     $('html, body').animate({scrollTop:$(hash).position().top});
@@ -115,7 +118,8 @@ $(function (){
     e.preventDefault();
     FunnelAnimation.scrollPageWithoutStops(0);
     window.location.hash = '';
-  })
+  });
+
 
   $(window).on('scroll.header', function (){
     if (isMobile){
@@ -126,8 +130,33 @@ $(function (){
       setTimeout(function (){
         $('header').addClass('opened');
       }, 0);
+      $('#top-getalerts-button').fadeIn();
     } else if ($(window).scrollTop() === 0 && $('header').hasClass('fixed')){
       $('header').removeClass('opened fixed');
+      $('#top-getalerts-button').hide();
     }
+  });
+
+  $('#contact-form').on('submit', function (e) {
+    e.preventDefault();
+    var hubspotutk = document.cookie.split('; ').filter(function (c) { return c.split('=')[0] === 'hubspotutk'; }).map(function (c){ return c.split('=')[1] })[0]
+    var hsContext = {
+      'hutk': hubspotutk,
+      'ipAddress': window._IP,
+      'pageUrl': window.location.href,
+      'pageName': document.title
+    };
+    $('#submit-hubspot-contact [name="hs_context"]').val(encodeURIComponent(JSON.stringify(hsContext)));
+    $('#submit-hubspot-contact [name="email"]').val(this.email.value);
+    $('#submit-hubspot-contact').trigger('submit');
+
+    $thanksMsg = $('<h2>Thanks for submitting your email! We’ll be in touch with you shortly.</h2>');
+    $(this).parent().empty().append($thanksMsg);
+
+    setTimeout(function () {
+      $thanksMsg.addClass('animate');
+    },1);
+
+    return false;
   });
 });
