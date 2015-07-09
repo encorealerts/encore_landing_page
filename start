@@ -4,7 +4,9 @@
 PORT=8080 \
 ./node_modules/forever/bin/forever \
 start \
--al forever.log \
--ao out.log \
--ae err.log \
-app.js
+--minUptime 1 \
+-l forever.log \
+-a \
+-o out.log \
+-e err.log \
+app.js \
