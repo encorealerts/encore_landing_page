@@ -54,13 +54,27 @@ app.get('/', function (req, res){
   res.render('index', {ip: req.connection.remoteAddress});
 });
 
-app.get('/blog/:post?', function (req,res) {
-  var blogUrl = 'http://encore.wpengine.com/';
-  if (req.param.post) {
-    blogUrl += req.params.post;
-  }
-  request(blogUrl).pipe(res);
-});
+// app.get('/blog/:post?', function (req,res) {
+//   var blogUrl = 'http://encore.wpengine.com/';
+//   if (req.param.post) {
+//     blogUrl += req.params.post;
+//   }
+//   request(blogUrl).pipe(res);
+// });
 
+var http = require('http');
+app.get('/blog/:post*?',function(req,res){
+  var options = {
+    host: "blog.encorealert.com", 
+    method: 'GET'
+  };
+  if (req.params.post) {
+    options.path = '/' + req.params.post + '/';
+  }
+  var request = http.request(options, function(response){
+    response.pipe(res);
+  });
+  request.end();
+});
 
 app.listen(__PORT);
