@@ -20,7 +20,7 @@
     <title>Encore Alert</title>
     
     <% if (__PRODUCTION){ %>
-      <link href="/encore.<%= __ASSETS_VERSION %>.css" rel="stylesheet" type="text/css" />
+      <link href="/encore.<%= __ASSETS_VERSION %>.min.css" rel="stylesheet" type="text/css" />
     <% } else {%>
       <link href="/styles/fonts/proxima-nova/stylesheet.css" rel="stylesheet" type="text/css" />
       <link href="/styles/fonts/roboto-slab/stylesheet.css" rel="stylesheet" type="text/css" />
@@ -315,7 +315,7 @@
         <small>© Encore HQ</small>
       </div>
     </footer>
-    
+
     <% if (__PRODUCTION) { %>
       <script src="/encore.<%= __ASSETS_VERSION %>.min.js"></script>
     <% } else { %>
