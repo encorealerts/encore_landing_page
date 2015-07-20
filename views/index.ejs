@@ -19,8 +19,8 @@
     <link type="icon" href="favicon.ico" />
     <title>Encore Alert</title>
     
-    <% if (production){ %>
-      <link href="/encore.min.css?v=13" rel="stylesheet" type="text/css" />
+    <% if (__PRODUCTION){ %>
+      <link href="/encore.<%= __ASSETS_VERSION %>.css" rel="stylesheet" type="text/css" />
     <% } else {%>
       <link href="/styles/fonts/proxima-nova/stylesheet.css" rel="stylesheet" type="text/css" />
       <link href="/styles/fonts/roboto-slab/stylesheet.css" rel="stylesheet" type="text/css" />
@@ -315,8 +315,9 @@
         <small>© Encore HQ</small>
       </div>
     </footer>
-    <% if (production) { %>
-      <script src="/encore.min.js?v=15"></script>
+    
+    <% if (__PRODUCTION) { %>
+      <script src="/encore.<%= __ASSETS_VERSION %>.min.js"></script>
     <% } else { %>
       <script src="/scripts/jquery-2.1.0.min.js"></script>
       <script src="/scripts/funnel-animation.js"></script>
@@ -325,7 +326,7 @@
     <script>
       window._IP = '<%= ip %>';
     </script>
-    <% if (production) { %>
+    <% if (__PRODUCTION) { %>
       <script type="text/javascript">
         var _gaq = _gaq || [];
         var pluginUrl =  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
