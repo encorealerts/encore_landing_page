@@ -1,13 +1,18 @@
-﻿*{
-  outline:none;
-  font-family:proxima_nova_ltlight;
-}
-a{text-decoration: none;}
-body{
+﻿body{
   margin:0;
   color:#474E5B;
   min-width:1024px;
 }
+
+*{
+  outline:none;
+  font-family:proxima_nova_ltlight;
+  
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+}
+
+a{text-decoration: none;}
 
 @media 
 handheld and (min-resolution: 1dppx),
@@ -148,10 +153,6 @@ h4{
 section{
   text-align:center;
 }
-div{
-  -moz-box-sizing:border-box;
-  box-sizing:border-box;
-}
 .inner-wrapper{
   width:1024px;
   margin:0 auto;
@@ -285,18 +286,19 @@ header #logo{
   background-size: auto 20%;
 }
 header.fixed #logo{height:60px;}
-#top-links{
+#main-menu{
   display:inline-block;
   text-align:right;
   width:50%;
   height: 100px;
   padding-top:32px;
+  vertical-align: top;
 }
-.fixed #top-links{
+.fixed #main-menu{
   height:60px;
   padding-top:12px;
 }
-#top-links a{
+#main-menu a{
   line-height:36px;
   margin-left:6px;
   height:36px;
@@ -316,6 +318,7 @@ header.fixed #logo{height:60px;}
   background-position: center;
   background-size: auto 50%;
   width:30px;
+  font-size: 0!important;
 }
 #top-social-buttons{
   margin:0 12px;
@@ -347,7 +350,7 @@ header.fixed #logo{height:60px;}
     left:5%;
     bottom: 0;
   }
-  #top-links{
+  #main-menu{
     position: absolute;
     top:0;
     bottom: 0;
@@ -355,11 +358,11 @@ header.fixed #logo{height:60px;}
     padding:0;
     height: auto;
   }
-  #top-links a:not(#top-getalerts-button):not(#top-login-button){
+  #main-menu a:not(#top-getalerts-button):not(#top-login-button){
     display: none;
   }
   #top-social-buttons{display: none;}
-  #top-links a{
+  #main-menu a{
     font-size:80%;
     height: 100%;
     padding: 0;
@@ -378,7 +381,7 @@ header.fixed #logo{height:60px;}
     width:40%;
     color:#1a1a1a;
   }
-  #top-links a b {
+  #main-menu a b {
     display: table-cell;
     vertical-align: middle;
     padding: 0 5%;
@@ -388,7 +391,6 @@ header.fixed #logo{height:60px;}
 * cover
 */
 #cover{
-  height:450px;
   padding:150px 0 100px;
   background:url('/images/cover.jpg') no-repeat top center;
   background-size:cover;
@@ -1128,6 +1130,7 @@ footer a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: 100%;
+  font-size: 0;
 }
 #footer-link-twitter{background-image: url('/images/footer-twitter.png')}
 #footer-link-facebook{background-image: url('/images/footer-fb.png')}

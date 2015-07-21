@@ -17,6 +17,7 @@
     <meta property="og:url" content="http://www.encorehq.com">
 
     <link type="icon" href="favicon.ico" />
+
     <title>Encore Alert</title>
     
     <% if (__PRODUCTION){ %>
@@ -31,17 +32,16 @@
   <body>
     <header>
       <div class="inner-wrapper">
-        <a href="#" id="logo"></a>
-        <div id="top-links">
-          <a href="#expertise" id="top-tour-button"><b>tour</b></a>
-          <a href="/blog" target="_blank" id="top-blog-button"><b>blog</b></a>
+        <a href="/" id="logo"></a><nav id="main-menu">
+          <a href="#expertise" id="top-tour-button" rel="nofollow"><b>Tour</b></a>
+          <a href="http://blog.encorealert.com" target="_blank" id="top-blog-button"><b>Blog</b></a>
           <div id="top-social-buttons">
-            <a href="http://twitter.com/encore" target="_blank" id="top-twitter-button"></a>
-            <a href="https://www.facebook.com/encorealert" target="_blank" id="top-fb-button"></a>
+            <a href="http://twitter.com/encore" rel="me" target="_blank" id="top-twitter-button">Twitter</a>
+            <a href="https://www.facebook.com/encorealert" rel="me" target="_blank" id="top-fb-button">Facebook</a>
           </div>
-          <a href="http://feed.encorealert.com" target="_blank" id="top-login-button"><b>login</b></a>
-          <a href="#cover" id="top-getalerts-button"><b>get alerts</b></a>
-        </div>
+          <a href="http://feed.encorealert.com" target="_blank" id="top-login-button"><b>Login</b></a>
+          <a href="#cover" id="top-getalerts-button" rel="nofollow"><b>Get Alerts</b></a>
+        </nav>
       </div>
     </header>
 
@@ -308,9 +308,9 @@
         <p>866-541-7776</p>
         <a href="mailto:hello@encorehq.com" target="_blank"><b>hello@encorehq.com</b></a>
         <div id="footer-links">
-          <a href="http://twitter.com/encore" target="_blank" id="footer-link-twitter"></a>
-          <a href="https://www.facebook.com/encorealert" target="_blank" id="footer-link-facebook"></a>
-          <a href="/blog" target="_blank" id="footer-link-blog"></a>
+          <a href="http://twitter.com/encore" target="_blank" rel="me" id="footer-link-twitter">Twitter</a>
+          <a href="https://www.facebook.com/encorealert" target="_blank" rel="me" id="footer-link-facebook">Facebook</a>
+          <a href="http://blog.encorealert.com" target="_blank" id="footer-link-blog">Blog</a>
         </div>
         <small>© Encore HQ</small>
       </div>
