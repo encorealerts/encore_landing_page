@@ -1,6 +1,6 @@
 {
   "name": "EncoreHQ",
-  "version": "3",
+  "version": "3.0.0",
   "description": "EncoreHQ landing page",
   "main": "app.js",
   "dependencies": {
