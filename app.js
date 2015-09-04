@@ -54,4 +54,8 @@ app.get('/', function (req, res){
   res.render('index', {ip: req.connection.remoteAddress});
 });
 
+app.get('/sections/:id', function (req, res){
+  res.render('sections/' + req.params.id);
+});
+
 app.listen(__PORT);

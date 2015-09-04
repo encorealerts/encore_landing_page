@@ -37,9 +37,8 @@ module.exports = (function (){
       path: __ROOT_PATH + '/public/styles/',
       dataType: 'css',
       files: [ 
-        'fonts/proxima-nova/stylesheet.css', 
-        'fonts/roboto-slab/stylesheet.css',
-        'encore.css'
+        'fonts/myriad-pro/style.css',
+        'landing-page.css'
       ],
       serveModify: handleAssetCache
     },
@@ -48,9 +47,8 @@ module.exports = (function (){
       path: __ROOT_PATH + '/public/scripts/',
       dataType: 'javascript',
       files: [ 
-        'jquery-2.1.0.min.js', 
-        'funnel-animation.js',
-        'encore.js' 
+        'jquery-2.1.0.min.js',
+        'landing-page.js'
       ],
       debug:!__PRODUCTION,
       serveModify: handleAssetCache

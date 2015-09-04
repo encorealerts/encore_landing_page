@@ -1,0 +1,353 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <!--[if IE 9]>
+      <meta http-equiv="X-UA-Compatible" content="IE=9" >
+    <![endif]-->
+    <meta name="description" content="Encore identifies key mentions and trends in real time and prompts you to act when it counts most.">
+    <meta name="robots" content="index,follow">
+
+    <!-- fb meta tags -->
+    <meta property="og:title" content="Big marketing opportunities in simple, bite-sized pieces">
+    <meta property="og:description" content="Encore identifies key mentions and trends in real time and prompts you to act when it counts most.">
+    <meta property="og:type" content="website">       
+    <meta property="og:image" content="http://www.encorehq.com/images/encore_square.png">
+    <meta property="og:url" content="http://www.encorehq.com">
+
+    <link type="icon" href="favicon.ico" />
+
+    <title>Encore Alert</title>
+    
+    <% if (__PRODUCTION){ %>
+      <link href="/encore.<%= __ASSETS_VERSION %>.min.css" rel="stylesheet" type="text/css" />
+    <% } else {%>
+      <link href="/styles/fonts/proxima-nova/stylesheet.css" rel="stylesheet" type="text/css" />
+      <link href="/styles/fonts/roboto-slab/stylesheet.css" rel="stylesheet" type="text/css" />
+      <link href="/styles/encore.css" rel="stylesheet" type="text/css" />
+    <% } %>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner-wrapper">
+        <a href="/" id="logo"></a><nav id="main-menu">
+          <a href="#expertise" id="top-tour-button" rel="nofollow"><b>Tour</b></a>
+          <a href="http://blog.encorealert.com" target="_blank" id="top-blog-button"><b>Blog</b></a>
+          <div id="top-social-buttons">
+            <a href="http://twitter.com/encore" rel="me" target="_blank" id="top-twitter-button">Twitter</a>
+            <a href="https://www.facebook.com/encorealert" rel="me" target="_blank" id="top-fb-button">Facebook</a>
+          </div>
+          <a href="http://feed.encorealert.com" target="_blank" id="top-login-button"><b>Login</b></a>
+          <a href="#cover" id="top-getalerts-button" rel="nofollow"><b>Get Alerts</b></a>
+        </nav>
+      </div>
+    </header>
+
+    <div style="display:none;">
+      <iframe name="hubspot_frame"></iframe>
+      <form action="https://forms.hubspot.com/uploads/form/v2/396218/a2a9073d-928a-4482-bc27-33ef90ce6c82" id="submit-hubspot-contact" method="POST" target="hubspot_frame">
+        <input type="email" name="email" />
+        <input type="hidden" name="hs_context" />
+      </form>
+    </div>
+    
+    <section id="cover">
+      <div class="inner-wrapper">
+        <div id="cover-center">
+          <h1>The right social opportunities at just the right time</h1>
+          <p>Encore Alert continually identiﬁes key mentions and trends from your brand's social media and sends you proactive alerts with recommended actions.</p>
+          <div class="get-alerts">
+            <form action="/" id="contact-form">
+              <input type="email" name="email" placeholder="Your email" required="required" />
+              <button type="submit">Get Alerts</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section id="clients">
+      <div class="inner-wrapper">
+        <div id="clients-tweets-filtered">
+          <h1 id="clients-tweets-filtered-counter"></h1>
+          <h3>tweets ﬁltered for our customers</h3>
+        </div>
+        <div id="clients-logos">
+          <a id="client-logos-ww" href="http://www.weddingwire.com/">
+          </a>
+          <a id="client-logos-cea" href="https://www.ce.org/">
+          </a>
+          <a id="client-logos-georgetown" href="http://www.georgetown.edu/">
+          </a>
+        </div>
+      </div>
+    </section>
+    
+		<div style="overflow:hidden">
+			<section id="expertise">
+				<div class="inner-wrapper">
+					<h1>How do you know you’re really achieving your goals on Twitter?</h1>
+					<h3 class="title">Encore Alert picks out the signal from the noise so you can spend time where it matters most.</h3>
+					<div id="expertise-items">
+						<div class="expertise-box">
+							<div class="expertise-box-icon"></div>
+							<div class="expertise-box-content">
+								<h4 class="subtitle"><b>Never miss a marketing opportunity</b></h4>
+								<p>Have peace of mind knowing that our proprietary algorithms are sifting through thousands of tweets about your brand 24/7, so that you don’t have to.</p>
+							</div>
+						</div>
+						<div class="expertise-box">
+							<div class="expertise-box-icon"></div>
+							<div class="expertise-box-content">
+								<h4 class="subtitle"><b>Act fast and efficiently</b></h4>
+								<p>Our alerts are sent to you in real-time so that you can take advantage of high-value marketing opportunities, as they happen.</p>
+							</div>
+						</div>
+						<div class="expertise-box">
+							<div class="expertise-box-icon"></div>
+							<div class="expertise-box-content">
+								<h4 class="subtitle"><b>Make data-driven decisions</b></h4>
+								<p>Receive data-driven content recommendations your followers will love.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section id="how-encore-works">
+				<div class="inner-wrapper">
+					<div id="how-encore-works-content">
+						<h1 class="title">How Encore Alert Works</h1>
+						<ul>
+							<li><p>We take the full ﬁrehose of tweets relevant to your brand and industry</p></li>
+              <li><p>Analyze everything 24/7 with our proprietary algorithms</p></li>
+							<li><p>Narrow them down to the 5-7 most valuable marketing opportunities each day, with recommendations on the optimal response</p></li>
+						</ul>
+					</div>
+					<div id="how-encore-works-funnel">
+						<div id="funnel">
+							<div id="funnel-entrance">
+								<div class="funnel-result alert-1"></div>
+								<div class="funnel-result alert-2"></div>
+								<div class="funnel-result alert-3"></div>
+								<div class="funnel-money"></div>
+								<div class="funnel-money"></div>
+								<div class="funnel-money"></div>
+								<div class="funnel-money"></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</div>
+    
+    <div id="email-background"></div>
+    <section id="email-function">
+      <div class="inner-wrapper">
+        <h1>We push these opportunities directly to your email inbox in a clean and simple real-time alert so you can focus, act, and capture results.</h1>
+      </div>
+    </section>
+    
+    <section id="examples">
+      <div class="inner-wrapper">
+        <div id="examples-menu">
+          <div class="examples-menu-item" data-image="influencer">
+            <div class="examples-menu-item-title">
+              <h3><b>IMPORTANT PEOPLE</b></h3>
+            </div>
+            <div class="examples-menu-item-body">
+              <p>Know who the most important people are in your industry, and the influential people you should respond to first.</p>
+            </div>
+          </div>
+          <div class="examples-menu-item" data-image="content">
+            <div class="examples-menu-item-title">
+              <h3><b>BEST CONTENT</b></h3>
+            </div>
+            <div class="examples-menu-item-body">
+              <p>Receive data-driven hashtag and article recommendations as they begin trending, so you can be a thought leader.</p>
+            </div>
+          </div>
+          <div class="examples-menu-item" data-image="growth">
+            <div class="examples-menu-item-title">
+              <h3><b>YOUR RESULTS</b></h3>
+            </div>
+            <div class="examples-menu-item-body">
+              <p>See what resonates with your audience and build on your success immediately.</p>
+            </div>
+          </div>
+        </div>
+        <div id="examples-content">
+          <div id="examples-content-trail">
+            <div data-example="influencer"></div>
+            <div data-example="content"></div>
+            <div data-example="growth"></div>
+          </div>
+        </div>
+        <div id="examples-mobile">
+          
+        </div>
+      </div>
+    </section>
+    
+    <section id="people-saying">
+      <div class="inner-wrapper">
+        <h1 class="title">What People Are Saying About Us</h1>
+        <div class="people-saying-boxes-wrapper">
+          <div class="people-saying-box">
+            <p>Encore helps me ﬁnd useful content from inﬂuencers I often miss in my dashboard.</p>
+            <div class="people-saying-box-author" data-author="anupam">
+              <p><b>Anupam Chakravarty<br />
+                <span>Head of Interactive at Georgetown</span>
+              </b></p>
+            </div>
+          </div>
+          
+          <div class="people-saying-box">
+            <p>Speed is of the essence to maximize results in social media, and Encore Alert allows us to never miss a beat.</p>
+            <div class="people-saying-box-author" data-author="sonny">
+              <p><b>Sonny Ganguly<br />
+                <span>Chief Marketing Officer at WeddingWire</span>
+              </b></p>
+            </div>
+          </div>
+
+          <div class="people-saying-box">
+            <p>I am loving the alerts in real time. Just wanted to let you know that Encore Alert is fantastic and it has been a huge help to us here.</p>
+            <div class="people-saying-box-author" data-author="tina">
+              <p><b>Tina Anthony<br />
+                <span>Sr. Manager of Social Media at Consumer Electronics Association</span>
+              </b></p>
+            </div>
+          </div>
+
+          <div class="people-saying-box">
+            <p>Encore Alert has been an amazing tool for me to use. I've been able to promptly respond to our Twitter fans and find content that our followers like and is relevant.</p>
+            <div class="people-saying-box-author" data-author="christine">
+              <p><b>Christine DeJoy<br />
+                <span>Social Media Manager at Twistory Studios</span>
+              </b></p>
+            </div>
+          </div>
+        </div>
+        <div id="people-saying-headline">
+          <h1 class="lite"><i>[Encore Alert] is a 21st century marketer’s dream.</i></h1>
+          <p><b>InTheCapital</b></p>
+        </div>
+        <div id="people-saying-media">
+          <a id="people-saying-media-wbj"></a>
+          <a id="people-saying-media-wp"></a>
+          <a id="people-saying-media-tc"></a>
+        </div>
+      </div>
+    </section>
+    
+    <section id="blog">
+      <div class="inner-wrapper">
+        <div id="blog-presentation">
+          <h1 class="subtitle">Our Blog</h1>
+          <p>Stay up-to-date on the latest social marketing trends, best practices, and case studies.</p>
+          <form action="http://encorehq.us4.list-manage.com/subscribe/post?u=8e3c2b58215498ae7d20ace81&amp;id=899d9e4318" method="post" target="_blank" novalidate>
+            <input type="email" name="EMAIL" placeholder="Your email address" />
+            <button type="submit">Subscribe to our blog</button>
+          </form>
+        </div>
+        <div id="blog-content">
+          <a target="_blank" class="blog-content-box"></a>
+          <a target="_blank" class="blog-content-box"></a>
+          <a target="_blank" class="blog-content-box"></a>
+          <a target="_blank" class="blog-content-box"></a>
+        </div>
+      </div>
+    </section>
+    
+    <section id="why-encore">
+      <div class="inner-wrapper">
+        <div id="why-encore-logo"></div>
+        <h1 class="title">3 Reasons to Try Encore Alert</h1>
+        <div class="why-encore-item" data-image="scientist">
+          <p>It’s like a social media data scientist who never sleeps and sends you relevant tweets</p>
+        </div>
+        <div class="why-encore-item" data-image="insights">
+          <p>Not another complex dashboard you have to log into, let the insights come to you</p>
+        </div>
+        <div class="why-encore-item" data-image="workflow">
+          <p>Supplements your current workﬂow and tools, and helps you spend time where it matters most</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="let-us-help" style="display:none;">
+      <div class="inner-wrapper">
+        <h1 class="title">Let us help you get started.</h1>
+        <div class="let-us-help-item" data-help="1">
+          <h3 class="subtitle">Free 30-Day Social Media Power Course</h3>
+          <p>We’ll share with you daily insights and best practices on how to optimize your social media strategy, so that you can get the highest marketing ROI possible.</p>
+          <a href="#" target="_blank"><b>Sign up for a free course &gt;</b></a>
+        </div>
+        <div class="let-us-help-item" data-help="2">
+          <h3 class="subtitle">Request a Demo</h3>
+          <p>One of our marketing specialists can be in touch with you soon to show you how we can help you get the ROI that you need from social.</p>
+          <a href="#" target="_blank"><b>Request a demo &gt;</b></a>
+        </div>
+        <div class="let-us-help-item" data-help="3">
+          <h3 class="subtitle">Start Getting Alerts</h3>
+          <p>Set up your own customized account and start receiving proactive alerts about your social media</p>
+          <a href="#" target="_blank"><b>Create an account now &gt;</b></a>
+        </div>
+      </div>
+    </section>
+    
+    <footer>
+      <div class="inner-wrapper">
+        <div id="footer-logo"></div>
+        <h2>Contact Us</h2>
+        <p>1400 Key Blvd #100</p>
+        <p>Arlington, VA 22209</p>
+        <p>866-541-7776</p>
+        <a href="mailto:hello@encorehq.com" target="_blank"><b>hello@encorehq.com</b></a>
+        <div id="footer-links">
+          <a href="http://twitter.com/encore" target="_blank" rel="me" id="footer-link-twitter">Twitter</a>
+          <a href="https://www.facebook.com/encorealert" target="_blank" rel="me" id="footer-link-facebook">Facebook</a>
+          <a href="http://blog.encorealert.com" target="_blank" id="footer-link-blog">Blog</a>
+        </div>
+        <small>© Encore HQ</small>
+      </div>
+    </footer>
+
+    <% if (__PRODUCTION) { %>
+      <script src="/encore.<%= __ASSETS_VERSION %>.min.js"></script>
+    <% } else { %>
+      <script src="/scripts/jquery-2.1.0.min.js"></script>
+      <script src="/scripts/funnel-animation.js"></script>
+      <script src="/scripts/encore.js"></script>
+    <% } %>
+    <script>
+      window._IP = '<%= ip %>';
+    </script>
+    <% if (__PRODUCTION) { %>
+      <script type="text/javascript">
+        var _gaq = _gaq || [];
+        var pluginUrl =  '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+          _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+          _gaq.push(['_setAccount', 'UA-33600528-1']);
+          _gaq.push(['_trackPageview']);
+        (function() {
+          var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true; 
+          ga.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'stats.g.doubleclick.net/dc.js';
+          var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+        })();
+      </script>
+
+      <script type="text/javascript">
+        (function(d,s,i,r) {
+            if (d.getElementById(i)){return;}
+            var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
+            n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/396218.js';
+            e.parentNode.insertBefore(n, e);
+        })(document,"script","hs-analytics",300000);
+      </script>
+    <% } %>
+  </body>
+</html>
