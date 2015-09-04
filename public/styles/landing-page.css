@@ -96,7 +96,7 @@ b { font-weight: 700; }
 .section-inner {
   max-width:960px;
   min-width: 320px;
-  padding: 48px 24px 96px;
+  padding: 48px 24px 120px;
   margin: 0 auto;
 }
 
@@ -278,7 +278,7 @@ input::-moz-focus-inner {
   padding: 0 24px;
   height: 60px;
 }
-#menu-spacer{height: 150px;}
+#menu-spacer{height: 120px;}
 
 #logo{
   background: url('/images/n/icons/header-logo.svg') no-repeat center;
@@ -458,6 +458,17 @@ input::-moz-focus-inner {
 #resources-box-1{ background-color: #5bc0be; }
 #resources-box-2{ background-color: #64a6bd; }
 #resources-box-3{ background-color: #477898; }
+@media handheld, screen and (max-width:640px) {
+  .resources-box {
+    width:100%;
+    max-width: 300px;
+  }
+  #resources-box-2,
+  #resources-box-3{ 
+    margin-left: 0;
+    margin-top: 24px; 
+  }
+}
 /* 7 - request-a-demo */
 .section#demo{
   padding: 240px 0;

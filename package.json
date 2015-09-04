@@ -11,8 +11,7 @@
     "ejs": "*",
     "ejs-locals": "*",
     "connect-assetmanager": "*",
-    "mime": "*",
-    "request": "*"
+    "mime": "*"
   },
   "engines": {
     "node": "0.12.x",

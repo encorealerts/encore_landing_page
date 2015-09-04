@@ -17,8 +17,7 @@ var
   app = express(),
   oneYear = 31556908800,
   assetManager = require('connect-assetmanager'),
-  assetManagerGroups = rootRequire('others/assetManagerGroups'),
-  request = require('request');
+  assetManagerGroups = rootRequire('others/assetManagerGroups');
 
 app.engine('ejs', engine);
 app.set('views', __dirname + '/views');
