@@ -285,7 +285,7 @@ input::-moz-focus-inner {
 
 #logo{
   background: url('/images/n/icons/header-logo.svg') no-repeat center;
-  background-size: auto 18px;
+  background-size: 100% auto;
   height: 60px;
   float:left;
   width: 200px;
