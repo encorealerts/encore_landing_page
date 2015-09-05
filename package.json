@@ -4,6 +4,7 @@
   "description": "EncoreHQ landing page",
   "main": "app.js",
   "dependencies": {
+    "debug": "*",
     "finalhandler": "*",
     "express": "4.x",
     "compression":"*",
