@@ -4,7 +4,7 @@ $(function () {
   $('#mobile-menu-toggler').on('click', function () {
     $('#menu-right-wrapper ul').toggleClass('mobile-visible mobile-hidden');
   });
-
+  // hide mobile menu after click
   $('#menu-right-wrapper a').on('click', function () {
     if ( $('#menu-right-wrapper ul').hasClass('mobile-visible') ) {
       $('#menu-right-wrapper ul').toggleClass('mobile-visible mobile-hidden');
@@ -12,7 +12,7 @@ $(function () {
   });
 
   function getOverlayShadowCss(marginSize) {
-    return '0 -:vpx 0 0 rgba(0,0,0,.3)'.replace(':v', Math.round(marginSize / 5));
+    return '0 -:vpx 0 0 rgba(0,0,0,.3)'.replace(':v', Math.round(marginSize / 10));
   }
 
   // menu shit
@@ -21,13 +21,13 @@ $(function () {
     
     var topDistance = $(window).scrollTop();
 
-
+    // trigger the scroll animations
     $('.section-inner > *').each(function () {
-      var
-        offsetTop = $(this).offset().top,
-        isVisible = topDistance + $(window).height() > offsetTop;
-      $(this)[isVisible ? 'addClass' : 'removeClass']('visible');
-    })
+      var isVisible = topDistance + $(window).height() > $(this).offset().top;
+      if (isVisible) {
+        $(this).addClass('visible');
+      }
+    });
 
     // overlay animation
     $('.section:not(:first)').each(function () {
@@ -72,6 +72,7 @@ $(function () {
     }
   });
 
+  // resize main section to always have size equals or bigger then window
   $(window).on('load resize', function (e) {
     var $main = $('.section#main');
     $main.css('height','auto');
@@ -117,5 +118,12 @@ $(function () {
     $('.insights-contact-message').addClass('visible')
     $('.insights-form').addClass('hidden')
     return false;
+  });
+
+  //load olark platform after the site is ready
+  $(window).on('load', function () {
+    var script = document.createElement('script');
+    document.body.appendChild(script);
+    script.src = '/scripts/olark.js';
   });
 });

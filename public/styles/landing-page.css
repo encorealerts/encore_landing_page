@@ -118,6 +118,7 @@ input::-moz-focus-inner {
 ::-moz-placeholder { color: #666; } /* Firefox 19+ */
 :-ms-input-placeholder { color: #666; }
 
+/* button */
 .large-button {
   border: none;
   box-shadow: inset 0 0 0 1px #fff;
@@ -146,23 +147,25 @@ input::-moz-focus-inner {
 }
 .large-button::before{
   background-color: rgba(0,0,0,.8);
-  width: 100%;
+  width: 150%;
   height: 100%;
   position: absolute;
   content: '';
-  left:-100%;
+  left:-160%;
   top:0;
   -moz-transition:left 400ms;
   -webkit-transition:left 400ms;
   transition:left 400ms;
   z-index:0;
+  transform: skewX(30deg);
 }
 .large-button:hover{ box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,0); }
-.large-button:hover::before{ left:0; }
+.large-button:hover::before{ left:-40%; }
 
 .large-button.orange{ box-shadow: inset 0 0 0 1px #fc7653; }
 .large-button.orange:hover{ box-shadow:inset 0px 0px 0px 1px rgba(255,255,255,0); }
 .large-button.orange::before{ background-color: #fc7653; }
+
 .text-input{
   display: inline-block;
   border:none;
@@ -310,14 +313,48 @@ input::-moz-focus-inner {
   float: right;
   cursor:pointer;
 }
+.menu-item{height: 60px;}
 .menu-item a{
+  top:calc(50% - 21px);
   color:#fff;
-  line-height: 60px;
+  line-height: 42px;
   font-size: 1rem;
   font-weight: 300;
   text-transform: uppercase;
-  padding: 0 24px;
+  padding: 0 18px;
+  margin-left: 6px;
   display: inline-block;
+  /* for cool effects*/
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+/* cool button effects are just on web menu */
+@media handheld, screen and (min-width:960px){
+  .menu-item a:hover::after{
+    content: attr(data-title);
+    position: absolute;
+    top:0;
+    left:0;
+    width:100%;
+    text-align: center;
+  }
+  .menu-item a::before{
+    background-color: #5BC0BE;
+    width: 150%;
+    height: 100%;
+    position: absolute;
+    content: '';
+    left:-180%;
+    top:0;
+    -moz-transition:left 500ms;
+    -webkit-transition:left 500ms;
+    transition:left 500ms;
+    z-index:0;
+    transform: skewX(30deg);
+  }
+  .menu-item a:hover::before{ left:-30%; }
+  #login-button { box-shadow: inset 0 0 0 1px #5BC0BE; }
 }
 
 @media handheld, screen and (max-width:960px){
@@ -332,8 +369,9 @@ input::-moz-focus-inner {
     transform: rotateY(120deg);
     transform-origin: right;
     transform-style: preserve-3d;
-    background-color: rgba(0,0,0,.9);
+    background-color: #000;
     text-align: left;
+    box-shadow: 0 0 1px rgba(0,0,0,.5);
   }
   #menu-right-wrapper ul.mobile-visible{
     transition: transform 450ms ease-out, opacity 300ms;
@@ -353,14 +391,20 @@ input::-moz-focus-inner {
     font-size: 1.2rem;
     padding: 0 48px;
     display: block;
+    top: 0;
+    margin: 0;
   }
-  #menu-right-wrapper ul li a:hover{color: #5bc0be;}
+  #menu-right-wrapper ul li a:not(#login-button):hover{color: #5bc0be;}
+  #login-button { 
+    background-color: #5BC0BE; 
+    color:#000;
+  }
+  #login-button:hover{color:#fff;}
 }
 
 /* per section specific */
 /* 1 - main */
 .section#main{
-    /*linear-gradient(to bottom, rgba(0,47,75,.6),rgba(0,47,75,.8)),*/
   background: 
     linear-gradient(to bottom, rgba(32,41,68,.9) 0%, rgba(71,120,152,.5) 50%, rgba(71,120,152,1) 100%),
     url('/images/n/photos/main-background.jpg') no-repeat center;
@@ -452,6 +496,7 @@ input::-moz-focus-inner {
   padding: 12px 12px 30px;
   text-align: left;
   color:#fff;
+  min-height: 180px;
 }
 #resources-box-2,
 #resources-box-3{ margin-left: 24px; }
