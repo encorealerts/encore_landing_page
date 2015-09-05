@@ -48,6 +48,7 @@ module.exports = (function (){
       dataType: 'javascript',
       files: [ 
         'jquery-2.1.0.min.js',
+        'jquery.easing.1.3.js',
         'landing-page.js'
       ],
       debug:!__PRODUCTION,
