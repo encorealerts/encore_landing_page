@@ -26,7 +26,7 @@ app.set('view engine', 'ejs');
 app.use(compress({
   filter: function (req, res) {
     if (/\.woff|\.ttf|\.svg|\.eot/.test(req.url)){
-      return true;
+      return false;
     }
     // fallback to standard filter function
     return compress.filter(req, res)  

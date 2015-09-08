@@ -7,7 +7,7 @@ body{
 }
 *{
   outline:none;
-  font-family:'Myriad Pro';
+  font-family:'Myriad Pro', arial;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
   -moz-appearance:none;
