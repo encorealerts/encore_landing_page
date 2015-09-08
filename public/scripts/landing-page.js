@@ -34,7 +34,7 @@ $(function () {
 
       // if top, just move everything to their place
       if (topDistance === 0) {
-        return $(this).css('margin-top', 0).css('box-shadow', getOverlayShadowCss(0));
+        return $(this).css('margin-top', 0)//.css('box-shadow', getOverlayShadowCss(0));
       }
 
       var 
@@ -46,15 +46,17 @@ $(function () {
 
       if (isVisible) {
         newMargin = ((visibleHeight < limit) ? visibleHeight : limit) / 3;
-        $(this).css('margin-top', -newMargin).css('box-shadow', getOverlayShadowCss(newMargin));
+        $(this).css('margin-top', -newMargin)//.css('box-shadow', getOverlayShadowCss(newMargin));
       } else {
-        $(this).css('margin-top', 0).css('box-shadow', getOverlayShadowCss(0));
+        $(this).css('margin-top', 0)//.css('box-shadow', getOverlayShadowCss(0));
       }
     });
 
     // menu animation
-    if (topDistance > 60){
-      $('#menu-wrapper').css('top', 0)[topDistance < lastScroll ? 'addClass' : 'removeClass']('visible');
+    if (topDistance > 60) {
+      if ($(':animated').size() === 0) {
+        $('#menu-wrapper').css('top', 0)[topDistance <= lastScroll ? 'addClass' : 'removeClass']('visible');
+      }
     } else {
       $('#menu-wrapper').css('top', '').removeClass('visible');
     }
@@ -93,9 +95,7 @@ $(function () {
     e.preventDefault();
     var hash = $(this).attr('href');
     $('html, body').animate({ scrollTop: $(hash).offset().top}, 750, 'easeInOutQuad', function () {
-      $('html, body').animate({ scrollTop: $(hash).offset().top}, 400, 'easeOutQuad', function () {
-        $('#menu-wrapper').css('top', '').removeClass('visible');
-      });
+      $('html, body').animate({ scrollTop: $(hash).offset().top}, 400, 'easeOutQuad');
     });
     window.location.hash = hash;
   });
