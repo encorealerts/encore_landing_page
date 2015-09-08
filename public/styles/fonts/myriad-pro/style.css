@@ -71,8 +71,8 @@ src: local('Myriad Pro Bold Condensed'), url('/styles/fonts/myriad-pro/MYRIADPRO
 /*
 */
 @font-face {
-font-family: 'Myriad Pro';
-font-style: normal;
-font-weight: 700;
-src: local('Myriad Pro'), url('MYRIADPRO-BOLD.woff') format('woff');
+  font-family: 'Myriad Pro';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Myriad Pro'), url('/styles/fonts/myriad-pro/MYRIADPRO-BOLD.woff') format('woff');
 }
