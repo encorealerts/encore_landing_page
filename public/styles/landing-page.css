@@ -286,7 +286,7 @@ input::-moz-focus-inner {
 #menu-spacer{height: 84px;}
 
 #logo{
-  background: url('/images/n/icons/header-logo.svg') no-repeat center;
+  background: url('/images/icons/header-logo.svg') no-repeat center;
   background-size: 100% auto;
   height: 60px;
   float:left;
@@ -300,7 +300,7 @@ input::-moz-focus-inner {
   font-size: 0;
 }
 #mobile-menu-toggler{
-  background: url('/images/n/icons/mobile-menu.svg') no-repeat center;
+  background: url('/images/icons/mobile-menu.svg') no-repeat center;
   background-size: 30px;
   border:none;
   height: 60px;
@@ -429,14 +429,14 @@ input::-moz-focus-inner {
 .section#main{
   background: 
     linear-gradient(to bottom, rgba(32,41,68,.9) 0%, rgba(71,120,152,.5) 50%, rgba(71,120,152,1) 100%),
-    url('/images/n/photos/main-background.jpg') no-repeat center;
+    url('/images/photos/main-background-3.jpg') no-repeat center;
   background-repeat: no-repeat, no-repeat;
   background-position: center, center;
   background-size: 100%, cover;
   color:#fff;
 }
 #main-section-logos{
-  background: url('/images/n/photos/logos-main.png') no-repeat top center;
+  background: url('/images/photos/logos-main.png') no-repeat top center;
   background-size: contain;
   height: 90px;
 }
@@ -489,7 +489,7 @@ input::-moz-focus-inner {
 .section#product p{color:#8e9ca5;}
 /* 3 - ces */
 .section#ces{
-  background: url('/images/n/photos/ces-background.jpg') no-repeat center;
+  background: url('/images/photos/ces-background.jpg') no-repeat center;
   background-size: cover;
   color:#fff;
 }
@@ -539,7 +539,7 @@ input::-moz-focus-inner {
 /* 7 - request-a-demo */
 .section#demo{
   padding: 240px 0;
-  background: url('/images/n/photos/demo-background.jpg') no-repeat center;
+  background: url('/images/photos/demo-background.jpg') no-repeat center;
   background-size: cover;
 }
 .section#demo h1{color:#fff;}
@@ -563,7 +563,7 @@ input::-moz-focus-inner {
 #footer-logo {
   width:200px;
   height: 17px;
-  background:url('/images/n/icons/footer-logo.svg') no-repeat left center;
+  background:url('/images/icons/footer-logo.svg') no-repeat left center;
   background-size: contain;
   margin-left: auto;
   margin-right: auto;
@@ -579,14 +579,14 @@ input::-moz-focus-inner {
   background-size: contain;
   margin-right: 6px;
 }
-#footer-twitter {background-image: url('/images/n/icons/twitter.svg');}
-#footer-facebook {background-image: url('/images/n/icons/facebook.svg');}
-#footer-linkedin {background-image: url('/images/n/icons/linkedin.svg');}
-#footer-twitter:hover {background-image: url('/images/n/icons/twitter-active.svg');}
-#footer-facebook:hover {background-image: url('/images/n/icons/facebook-active.svg');}
-#footer-linkedin:hover {background-image: url('/images/n/icons/linkedin-active.svg');}
+#footer-twitter {background-image: url('/images/icons/twitter.svg');}
+#footer-facebook {background-image: url('/images/icons/facebook.svg');}
+#footer-linkedin {background-image: url('/images/icons/linkedin.svg');}
+#footer-twitter:hover {background-image: url('/images/icons/twitter-active.svg');}
+#footer-facebook:hover {background-image: url('/images/icons/facebook-active.svg');}
+#footer-linkedin:hover {background-image: url('/images/icons/linkedin-active.svg');}
 #footer-phone{
-  background: url('/images/n/icons/phone.svg') no-repeat left center;
+  background: url('/images/icons/phone.svg') no-repeat left center;
   background-size: 18px;
   padding-left: 24px;
   display: inline-block;

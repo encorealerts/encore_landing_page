@@ -4,8 +4,16 @@
 
 global.__PORT = process.env.PORT || 3456;
 global.__PRODUCTION = !!process.env.PORT;
+global.__PRODUCTION = true;
 global.__ROOT_PATH = __dirname;
 global.__ASSETS_VERSION = process.env.ASSET_FILES_VERSION || 51;
+
+global.urlFor = function (path) {
+  if (__PRODUCTION) {
+    return 'https://s3.amazonaws.com/encore-landing-page' + path;
+  }
+  return path;
+}
 
 var 
   express = require('express'),

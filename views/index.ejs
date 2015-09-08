@@ -64,7 +64,7 @@
         <div>
         <div class="quote-wrapper auto-clear margin-bottom-2x">
           <div class="quote-person-wrapper" >
-            <img class="quote-person" src="/images/n/photos/sonny.png" />
+            <img class="quote-person" src="<%= urlFor('/images/photos/sonny.png') %>" />
           </div>
           <div class="quote-text-wrapper">
             <p class="margin-bottom-half"><span class="text-line">"Speed is the essence to maximize results in social media,</span> <span class="text-line">and Encore Alert allows us to never miss a beat"</span></p>
@@ -142,36 +142,6 @@
     </script>
 
     <% if (__PRODUCTION) { %>
-    <% /* 1) Google Adwords - we want to track whenever someone clicks any of the Get Alerts ("conversion") -->
-      Google Code for Lead Form Conversion Page
-    In your html page, add the snippet and call
-    goog_report_conversion when someone clicks on the
-    chosen link or button. */ %>
-    <script type="text/javascript">
-      goog_snippet_vars = function() {
-        var w = window;
-        w.google_conversion_id = 942388352;
-        w.google_conversion_label = "9SKDCKKKnV8QgOmuwQM";
-        w.google_remarketing_only = false;
-      }
-      // DO NOT CHANGE THE CODE BELOW.
-      goog_report_conversion = function(url) {
-        goog_snippet_vars();
-        window.google_conversion_format = "3";
-        window.google_is_call = true;
-        var opt = new Object();
-        opt.onload_callback = function() {
-        if (typeof(url) != 'undefined') {
-          window.location = url;
-        }
-      }
-      var conv_handler = window['google_trackConversion'];
-      if (typeof(conv_handler) == 'function') {
-        conv_handler(opt);
-      }
-    }
-    </script>
-    <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion_async.js"> </script>
     <!-- 2) Optimizely - for A/B testing - add immediately after opening <head> tag -->
     <script src="//cdn.optimizely.com/js/166026312.js"></script>
     <!-- 4) Google Analytics - copy into every page -->

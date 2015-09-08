@@ -81,9 +81,9 @@ $(function () {
     $main.css('height', $main.height() < $(window).height() ? ($(window).height() + 'px') : '');
   }).trigger('resize');
 
+  $(window).trigger('scroll');
+
   $(window).on('load', function (e) {
-    console.log('scroll')
-    $(window).trigger('scroll');
     // load sections async
     $('.placeholder').each(function (){
       var url = '/sections/' + $(this).attr('data-section');
@@ -98,6 +98,12 @@ $(function () {
       document.body.appendChild(script);
       script.src = '/scripts/olark.js';
     }, 1000);
+
+    setTimeout(function () {
+      var script = document.createElement('script');
+      document.body.appendChild(script);
+      script.src = '/scripts/google_adwords.js';
+    }, 500);
   });
 
 
