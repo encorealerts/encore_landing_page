@@ -81,9 +81,9 @@ $(function () {
     $main.css('height', $main.height() < $(window).height() ? ($(window).height() + 'px') : '');
   }).trigger('resize');
 
-  $(window).trigger('scroll');
 
   $(window).on('load', function (e) {
+    $(window).trigger('scroll');
     // load sections async
     $('.placeholder').each(function (){
       var url = '/sections/' + $(this).attr('data-section');

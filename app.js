@@ -4,7 +4,6 @@
 
 global.__PORT = process.env.PORT || 3456;
 global.__PRODUCTION = !!process.env.PORT;
-global.__PRODUCTION = true;
 global.__ROOT_PATH = __dirname;
 global.__ASSETS_VERSION = process.env.ASSET_FILES_VERSION || 51;
 
@@ -50,6 +49,7 @@ app.use(express.static(__dirname + '/public', {
 // app.use(bodyParser.json());
 // mime types
 mime.define({
+  'font/opentype': ['otf'],
   'application/octet-stream': ['ttf'],
   'image/svg+xml': ['svg'],
   'application/vnd.ms-fontobject': ['eot'],
