@@ -82,17 +82,25 @@ $(function () {
   }).trigger('resize');
 
   $(window).on('load', function (e) {
+    console.log('scroll')
     $(window).trigger('scroll');
-  });
-
-
-  // load sections async
-  $('.placeholder').each(function (){
-    var url = '/sections/' + $(this).attr('data-section');
-    $(this).load(url, function () {
-      $(this).children(':first').unwrap();
+    // load sections async
+    $('.placeholder').each(function (){
+      var url = '/sections/' + $(this).attr('data-section');
+      $(this).load(url, function () {
+        console.log('load page')
+        $(this).children(':first').unwrap();
+      });
     });
+
+    setTimeout(function () {
+      var script = document.createElement('script');
+      document.body.appendChild(script);
+      script.src = '/scripts/olark.js';
+    }, 1000);
   });
+
+
 
   //animated scroll
   $('a[href*="#"]').on('click', function (e){
@@ -122,12 +130,5 @@ $(function () {
     $('.insights-contact-message').addClass('visible')
     $('.insights-form').addClass('hidden')
     return false;
-  });
-
-  //load olark platform after the site is ready
-  $(window).on('load', function () {
-    var script = document.createElement('script');
-    document.body.appendChild(script);
-    script.src = '/scripts/olark.js';
   });
 });
