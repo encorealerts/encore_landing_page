@@ -62,7 +62,7 @@ $(function () {
     }
 
     lastScroll = topDistance;
-  }).trigger('scroll');
+  });
 
   // listen for home/and and trigger scroll
   $(document).on('keyup', function (e) {
@@ -80,6 +80,10 @@ $(function () {
     $main.css('height','auto');
     $main.css('height', $main.height() < $(window).height() ? ($(window).height() + 'px') : '');
   }).trigger('resize');
+
+  $(window).on('load', function (e) {
+    $(window).trigger('scroll');
+  });
 
 
   // load sections async
