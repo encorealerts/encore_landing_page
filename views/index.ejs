@@ -19,11 +19,11 @@
     <link type="icon" href="favicon.ico" />
 
     <!-- Optimizely - for A/B testing - add immediately after opening <head> tag -->
-    <script async src="//cdn.optimizely.com/js/166026312.js"></script>
 
     <title>Encore Alert</title>
     
     <% if (__PRODUCTION){ %>
+      <script async src="//cdn.optimizely.com/js/166026312.js"></script>
       <link href="/encore.<%= __ASSETS_VERSION %>.min.css" rel="stylesheet" type="text/css" />
     <% } else {%>
       <link href="/styles/fonts/myriad-pro/style.css" rel="stylesheet" type="text/css" />
