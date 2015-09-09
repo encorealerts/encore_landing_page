@@ -87,18 +87,21 @@ $(function () {
     $(window).trigger('scroll');
   }, 1000);
 
-  $(window).on('load', function (e) {
-    clearTimeout(firstScrollTimeout);
-    if (!scrolled) {
-      $(window).trigger('scroll');
-    }
-    // load sections async
+  // load sections async
+  setTimeout(function () {
     $('.placeholder').each(function () {
       var url = '/sections/' + $(this).attr('data-section');
       $(this).load(url, function () {
         $(this).children(':first').unwrap();
       });
     });
+  }, 1000);
+
+  $(window).on('load', function (e) {
+    clearTimeout(firstScrollTimeout);
+    if (!scrolled) {
+      $(window).trigger('scroll');
+    }
 
     setTimeout(function () {
       var script = document.createElement('script');
@@ -110,10 +113,15 @@ $(function () {
       var script = document.createElement('script');
       document.body.appendChild(script);
       script.src = '/scripts/google_adwords.js';
+      script.onload = function () {
+        $('form button').on('click', function (e) {
+          try {
+            goog_report_conversion();
+          } catch (err) {}
+        });
+      }
     }, 1000);
   });
-
-
 
   //animated scroll
   $('a[href*="#"]').on('click', function (e){
