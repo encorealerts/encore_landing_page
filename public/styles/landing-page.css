@@ -602,6 +602,9 @@ input::-moz-focus-inner {
     width: 100%;
     text-align: center;
   }
+  .footer-left-column{
+    text-align: left;
+  }
   #footer-right{
     margin-top: 120px;
   }
