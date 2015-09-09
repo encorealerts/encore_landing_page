@@ -18,6 +18,9 @@
 
     <link type="icon" href="favicon.ico" />
 
+    <!-- Optimizely - for A/B testing - add immediately after opening <head> tag -->
+    <script async src="//cdn.optimizely.com/js/166026312.js"></script>
+
     <title>Encore Alert</title>
     
     <% if (__PRODUCTION){ %>
@@ -142,8 +145,6 @@
     </script>
 
     <% if (__PRODUCTION) { %>
-    <!-- Optimizely - for A/B testing - add immediately after opening <head> tag -->
-    <script async src="//cdn.optimizely.com/js/166026312.js"></script>
     <!-- Google Analytics - copy into every page -->
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){

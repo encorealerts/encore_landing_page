@@ -81,14 +81,21 @@ $(function () {
     $main.css('height', $main.height() < $(window).height() ? ($(window).height() + 'px') : '');
   }).trigger('resize');
 
+  // loads home after 1 second if window.load was not triggered
+  var scrolled = false, firstScrollTimeout = setTimeout(function () {
+    scrolled = true;
+    $(window).trigger('scroll');
+  }, 1000);
 
   $(window).on('load', function (e) {
-    $(window).trigger('scroll');
+    clearTimeout(firstScrollTimeout);
+    if (!scrolled) {
+      $(window).trigger('scroll');
+    }
     // load sections async
-    $('.placeholder').each(function (){
+    $('.placeholder').each(function () {
       var url = '/sections/' + $(this).attr('data-section');
       $(this).load(url, function () {
-        console.log('load page')
         $(this).children(':first').unwrap();
       });
     });
@@ -103,7 +110,7 @@ $(function () {
       var script = document.createElement('script');
       document.body.appendChild(script);
       script.src = '/scripts/google_adwords.js';
-    }, 500);
+    }, 1000);
   });
 
 

@@ -96,7 +96,7 @@ b { font-weight: 700; }
 .section-inner {
   max-width:960px;
   min-width: 320px;
-  padding: 84px 24px 132px;
+  padding: 84px 24px 156px;
   margin: 0 auto;
 }
 
@@ -510,6 +510,7 @@ input::-moz-focus-inner {
 .section#resources{ background-color: #fff;}
 .section#resources h1{color:#595f72;}
 .section#resources .section-inner > p{color:#8e9ca5;}
+.section#resources .section-inner { font-size: 0;}
 .resources-box {
   width:calc(33.3% - 16px);
   display: inline-block;
