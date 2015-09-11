@@ -109,18 +109,12 @@ $(function () {
       script.src = '/scripts/olark.js';
     }, 1000);
 
-    setTimeout(function () {
-      var script = document.createElement('script');
-      document.body.appendChild(script);
-      script.src = '/scripts/google_adwords.js';
-      script.onload = function () {
-        $('form button').on('click', function (e) {
-          try {
-            goog_report_conversion();
-          } catch (err) {}
-        });
-      }
-    }, 1000);
+    // bind google ad words
+    $('form button').on('click', function (e) {
+      try {
+        goog_report_conversion();
+      } catch (err) {}
+    });
   });
 
   //animated scroll
