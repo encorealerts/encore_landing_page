@@ -114,6 +114,10 @@ $(function () {
       try {
         goog_report_conversion();
       } catch (err) {}
+
+      try {
+        fbq('track', 'Lead');
+      } catch (err) {}
     });
   });
 

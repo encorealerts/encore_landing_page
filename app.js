@@ -5,7 +5,7 @@
 global.__PORT = process.env.PORT || 3456;
 global.__PRODUCTION = !!process.env.PORT;
 global.__ROOT_PATH = __dirname;
-global.__ASSETS_VERSION = process.env.ASSET_FILES_VERSION || 51;
+global.__ASSETS_VERSION = process.env.ASSET_FILES_VERSION || 60;
 
 global.urlFor = function (path) {
   if (__PRODUCTION) {

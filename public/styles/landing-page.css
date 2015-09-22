@@ -168,10 +168,14 @@ input::-moz-focus-inner {
   display: inline-block;
   border:none;
   background-color: #fff;
-  line-height: 60px;
   width: 300px;
   font-size: 1.2rem;
+  font-weight: 300;
   padding: 0 24px;
+  /* hack to appear centered on input */
+  padding-top: 5px;
+  line-height: 55px;
+  /* -- */
   box-shadow: 0 0 1px rgba(0,0,0,.5);
 }
 
