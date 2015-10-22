@@ -287,14 +287,14 @@ input::-moz-focus-inner {
   padding: 0 24px;
   height: 60px;
 }
-#menu-spacer{height: 84px;}
+#menu-spacer{height: 48px;}
 
-#logo{
-  background: url('/images/icons/header-logo.svg') no-repeat center;
+#logo {
+  background: url('/images/icons/logo.svg') no-repeat center;
   background-size: 100% auto;
   height: 60px;
   float:left;
-  width: 200px;
+  width: 100px;
 }
 
 #menu-right-wrapper{
@@ -440,8 +440,8 @@ input::-moz-focus-inner {
   color:#fff;
 }
 #main-section-logos{
-  background: url('/images/photos/logos-main.png') no-repeat top center;
-  background-size: contain;
+  background: rgba(255,255,255,.6) url('/images/photos/logos-main.png') no-repeat center;
+  background-size: 90%;
   height: 90px;
 }
 @media handheld, screen and (max-width:640px){
@@ -568,7 +568,7 @@ input::-moz-focus-inner {
 #footer-logo {
   width:200px;
   height: 17px;
-  background:url('/images/icons/footer-logo.svg') no-repeat left center;
+  background:url('/images/icons/logo.svg') no-repeat left center;
   background-size: contain;
   margin-left: auto;
   margin-right: auto;
