@@ -95,7 +95,7 @@ $(function () {
         $(this).children(':first').unwrap();
       });
     });
-  });
+  }, 1000);
 
   $(window).on('load', function (e) {
     clearTimeout(firstScrollTimeout);
