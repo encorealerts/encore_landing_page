@@ -2,7 +2,7 @@
  
 # Invoke the Forever module (to START our Node.js server).
 PORT=3456 \
-ASSET_FILES_VERSION=105 \
+ASSET_FILES_VERSION=107 \
 forever \
 start \
 --minUptime 1 \
