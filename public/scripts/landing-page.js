@@ -75,11 +75,11 @@ $(function () {
   });
 
   // resize main section to always have size equals or bigger then window
-  // $(window).on('load resize', function (e) {
-  //   var $main = $('.section#main');
-  //   $main.css('height','auto');
-  //   $main.css('height', $main.height() < $(window).height() ? ($(window).height() + 'px') : '');
-  // }).trigger('resize');
+  $(window).on('load resize', function (e) {
+    var $main = $('.section#main'), targetHeight = $(window).height() - 120;
+    $main.css('height','auto');
+    $main.css('height', $main.height() < targetHeight ? (targetHeight + 'px') : '');
+  }).trigger('resize');
 
   // loads home after 1 second if window.load was not triggered
   var scrolled = false, firstScrollTimeout = setTimeout(function () {
