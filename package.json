@@ -4,7 +4,7 @@
   "description": "EncoreHQ landing page",
   "main": "app.js",
   "dependencies": {
-    "express": "4.x",
+    "express": "4.13",
     "compression":"*",
     "body-parser":"*",
     "cookie-parser":"*",
@@ -14,8 +14,8 @@
     "mime": "*"
   },
   "engines": {
-    "node": "0.12.x",
-    "npm": "2.x"
+    "node": "5.7.0",
+    "npm": "3.6.0"
   },
   "repository":{ 
     "type" : "git",
