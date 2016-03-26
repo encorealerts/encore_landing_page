@@ -33,102 +33,40 @@
 
   <body>
 
-    <div id="menu-wrapper">
-      <a href="#main" id="logo"></a>
-      <div id="menu-right-wrapper" class="auto-clear">
-        <ul class="mobile-hidden">
-          <li class="menu-item"><a href="#product" data-title="Product">Product</a></li>
-          <li class="menu-item"><a href="#ces" data-title="Customers">Customers</a></li>
-          <li class="menu-item"><a href="/blog" target="_blank" data-title="Blog">Blog</a></li>
-          <li class="menu-item"><a href="http://feed.encorealert.com" target="_blank" data-title="Login" id="login-button">Login</a></li>
-        </ul>
-        <button id="mobile-menu-toggler"></button>
-      </div>
-    </div>
-
     <section class="section" id="main">
-
-      <div id="menu-spacer"></div>
-
       <div class="section-inner">
-        <div>
-        <h1 class="margin-bottom">The next generation of social media monitoring<h1>
-        <h2 class="margin-bottom"><span class="text-line">Never miss another valuable opportunity with machine intelligence that</span> <span class="text-line">alerts you about emerging trends, crises, and important people</span></h2>
+        <a id="logo" href="#" class="margin-bottom">
+          <img src="images/logo.png" class="autosize-image" />
+        </a>
 
-        <div class="insights-form-wrapper margin-bottom">
-          <h2 class="insights-contact-message">Thanks for submitting your email! We’ll be in touch with you shortly.</h2>
-          <form action="/" class="insights-form" name="insights-form-1">
-            <input class="text-input" type="email" name="email" placeholder="Your work email" required="required" /><!--
-            --><button data-title="Get Insights Today" class="large-button orange">Get Insights Today</button>
-          </form>
-        </div>
-        </div>
+        <div class="separator"></div>
+        <h1 class="margin-bottom">We are proud and excited to announce that <br /> Encore has joined Meltwater.</h1>
 
-        <div>
-        <div class="quote-wrapper auto-clear margin-bottom">
-          <div class="quote-person-wrapper" >
-            <img class="quote-person" src="<%= urlFor('/images/photos/sonny.png') %>" />
-          </div>
-          <div class="quote-text-wrapper">
-            <p class="margin-bottom-half"><span class="text-line">"Speed is the essence to maximize results in social media,</span> <span class="text-line">and Encore allows us to never miss a beat"</span></p>
-            <p><small><b>Sonny Ganguly, CMO of WeddingWire</b></small></p>
-          </div>
+        <p class="margin-bottom">Three years ago, Encore set out to build a solution that would empower marketers with key actionable insights. We’ve worked tirelessly to build smart alerts that cut through all the social noise and deliver the magic moments that are often missed.</p>
+
+        <p class="margin-bottom">In keeping with our promise, we can’t imagine a better home for our product than Meltwater. Our shared vision will allow us to better serve thousands of incredible customers worldwide. To learn about our new home Meltwater, click here. To learn more about the acquisition, read this blog post or check out the press announcement.</p>
+
+        <p class="margin-bottom">The mission is still strong, our passion still unceasing. For all our customers and supporters, thank you for being part of the journey thus far. We’re excited to share this next chapter with you.</p>
+
+        <p><b>Much love,</b></p>
+
+        <img id="signatures" src="images/signatures.png" class="margin-bottom autosize-image" />
+        <div class="separator"></div>
+        <div id="actions">
+          <a href="#" class="button dark">Current Customers Login</a>
+          <a href="#" class="button light">Get Alerts Now</a>
         </div>
       </div>
     </section>
 
-    <%- include ./sections/product.ejs %>
-    <!-- <div class="placeholder" data-section="product"></div> -->
-    <div class="placeholder" data-section="ces"></div>
-    <div class="placeholder" data-section="workflow"></div>
-    <div class="placeholder" data-section="started"></div>
-    <div class="placeholder" data-section="resources"></div>
-    <div class="placeholder" data-section="demo"></div>
-
-    <footer class="section" id="footer">
-      <div class="section-inner autoclean">
-
-        <div id="footer-left">
-          <% /* <div class="footer-left-column">
-            <h3 class="margin-bottom-half uppercase">Get Started</h3>
-            <a href="#" target="_blank"><p>Request Demo</p></a>
-          </div> */ %>
-          <div class="footer-left-column">
-            <h3 class="margin-bottom-half uppercase">Resources</h3>
-            <a href="http://info.encorealert.com/sidekick" target="_blank" class="margin-bottom-half"><p>Social Media Calendar</p></a>
-            <a href="/blog" target="_blank" class="margin-bottom-half"><p>Blog</p></a>
-            <a href="http://info.encorealert.com/office-hour" target="_blank"><p>Encore Experts</p></a>
-          </div>
-          <div class="footer-left-column">
-            <h3 class="margin-bottom-half uppercase">Company</h3>
-            <a href="https://angel.co/encore-alert/jobs" target="_blank" class="margin-bottom-half"><p>We're Hiring</p></a>
-            <a href="mailto:hello@encorealert.com" target="_blank"><p>Support</p></a>
-          </div>
-        </div>
-
-        <div id="footer-right">
-          <div id="footer-logo" class="margin-bottom"></div>
-          <div id="footer-social-wrapper" class="margin-bottom">
-            <a href="https://www.linkedin.com/company/encore-hq" target="_blank" id="footer-linkedin">LinkedIn</a>
-            <a href="https://twitter.com/encore" target="_blank" id="footer-twitter">Twitter</a>
-            <a href="https://www.facebook.com/encorealert" target="_blank" id="footer-facebook">Facebook</a>
-          </div>
-          <div id="footer-phone">
-            <p>(866) 541 - 7776</p>
-          </div>
-        </div>
-
-      </div>
-    </footer>
-
-    <% /* form to submit to hubspot */ %>
+    <!-- <% /* form to submit to hubspot */ %>
     <div style="display:none;">
       <iframe name="hubspot_frame"></iframe>
       <form action="https://forms.hubspot.com/uploads/form/v2/396218/a2a9073d-928a-4482-bc27-33ef90ce6c82" id="submit-hubspot-contact" method="POST" target="hubspot_frame">
         <input type="email" name="email" />
         <input type="hidden" name="hs_context" />
       </form>
-    </div>
+    </div> -->
 
     <% if (__PRODUCTION) { %>
       <script src="/encore.<%= __ASSETS_VERSION %>.min.js"></script>
