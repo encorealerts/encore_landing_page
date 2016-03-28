@@ -7,12 +7,12 @@ global.__PRODUCTION = !!process.env.PORT;
 global.__ROOT_PATH = __dirname;
 global.__ASSETS_VERSION = process.env.ASSET_FILES_VERSION || 60;
 
-global.urlFor = function (path) {
-  if (__PRODUCTION) {
-    return 'https://s3.amazonaws.com/encore-landing-page' + path;
-  }
-  return path;
-}
+// global.urlFor = function (path) {
+//   if (__PRODUCTION) {
+//     return 'https://s3.amazonaws.com/encore-landing-page' + path;
+//   }
+//   return path;
+// }
 
 var 
   express = require('express'),
