@@ -9,7 +9,7 @@ body{
 }
 *{
   outline:none;
-  font-family:'Myriad Pro', arial;
+  font-family:'source_sans_pro', arial;
   -moz-box-sizing:border-box;
   box-sizing:border-box;
   -moz-appearance:none;
@@ -28,17 +28,21 @@ a,
 a:hover,
 a:visited{ text-decoration: none; }
 
-h1{
+h1 {
   font-weight: 600;
   font-size: 2rem;
-  line-height: 1.1;
+  line-height: 1.2;
   color:#fff;
 }
 p {
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   color: #ffffff;
+}
+@media handheld, screen and (max-width:720px) {
+  h1 { font-size: 1.6rem; }
+  p { font-size: 1rem; }
 }
 b { font-weight: 600; }
 
@@ -48,7 +52,7 @@ b { font-weight: 600; }
   display: table;
   clear: both;
 }
-.margin-bottom {margin-bottom: 30px;}
+.margin-bottom {margin-bottom: 36px;}
 
 @media handheld, screen and (max-width:720px){
   br {display: none;}
@@ -101,13 +105,18 @@ input::-moz-focus-inner {
   font-weight: 600;
   color:#fff;
   text-transform: uppercase;
+  transition: transform 250ms;
+  transform: scale(1);
+}
+.button:hover {
+  transform: scale(1.05);
 }
 .button.dark { background-color: #1c4263; }
 .button.light { background-color: #5bc0be; }
 .button + .button {
-  margin-left: 12px;
+  margin-left: 24px;
 }
-@media handheld, screen and (max-width:720px){
+@media handheld, screen and (max-width:720px) {
   .button {
     width: 100%;
   }

@@ -26,7 +26,7 @@
       <script async src="//cdn.optimizely.com/js/166026312.js"></script>
       <link href="/encore.<%= __ASSETS_VERSION %>.min.css" rel="stylesheet" type="text/css" />
     <% } else {%>
-      <link href="/styles/fonts/myriad-pro/style.css" rel="stylesheet" type="text/css" />
+      <link href="/styles/fonts/source-sans-pro/stylesheet.css" rel="stylesheet" type="text/css" />
       <link href="/styles/landing-page.css" rel="stylesheet" type="text/css" />
     <% } %>
   </head>
@@ -91,15 +91,16 @@
       ga('create', 'UA-33600528-1', 'auto');
       ga('send', 'pageview');
     </script>
+
     <% /* 5) Hubspot - copy into every page just before </body> */ %>
-    <script type="text/javascript">
+    <!-- <script type="text/javascript">
       (function(d,s,i,r) {
         if (d.getElementById(i)){return;}
         var n=d.createElement(s),e=d.getElementsByTagName(s)[0];
         n.id=i;n.src='//js.hs-analytics.net/analytics/'+(Math.ceil(new Date()/r)*r)+'/396218.js';
         e.parentNode.insertBefore(n, e);
       })(document,"script","hs-analytics",300000);
-    </script>
+    </script> -->
 
     <!-- Google Code for Lead Form1 Conversion Page
     In your html page, add the snippet and call

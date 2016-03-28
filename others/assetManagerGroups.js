@@ -37,7 +37,7 @@ module.exports = (function (){
       path: __ROOT_PATH + '/public/styles/',
       dataType: 'css',
       files: [ 
-        'fonts/myriad-pro/style.css',
+        'fonts/source-sans-pro/stylesheet.css',
         'landing-page.css'
       ],
       serveModify: handleAssetCache
