@@ -47,7 +47,7 @@ p {
 b { font-weight: 700; }
 p a { 
   color:#fff; 
-  font-weight: 700;
+  text-decoration: underline;
 }
 
 /* tools */
